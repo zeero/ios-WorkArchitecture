@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol ViewPresentation {}
+
+struct ViewPresenter {
+
+}
+
+extension ViewPresenter: ViewPresentation {}

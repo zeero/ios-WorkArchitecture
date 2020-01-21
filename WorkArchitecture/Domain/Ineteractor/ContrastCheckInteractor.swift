@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol ContrastCheckUseCase {}
+
+struct ContrastCheckInteractor {
+
+}
+
+extension ContrastCheckInteractor: ContrastCheckUseCase {}

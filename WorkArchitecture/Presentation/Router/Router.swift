@@ -6,4 +6,12 @@
 //  Copyright © 2020 zeero. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+protocol Wireframe {}
+
+struct Router {
+
+}
+
+extension Router: Wireframe {}
