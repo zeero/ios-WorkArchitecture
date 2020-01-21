@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64323D67728007A21E6 /* ViewPresenter.swift */; };
+		4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */; };
+		4BADF64C23D67774007A21E6 /* WebAIMRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64B23D67774007A21E6 /* WebAIMRepository.swift */; };
+		4BADF65023D677C2007A21E6 /* WebAIMDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64F23D677C2007A21E6 /* WebAIMDataAccess.swift */; };
+		4BADF65223D6783F007A21E6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65123D6783F007A21E6 /* Router.swift */; };
+		4BADF65523D67ED7007A21E6 /* WebAIMEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65423D67ED7007A21E6 /* WebAIMEntity.swift */; };
 		4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE3E23D67292008AA000 /* AppDelegate.swift */; };
 		4BBABE4123D67292008AA000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE4023D67292008AA000 /* SceneDelegate.swift */; };
 		4BBABE4323D67292008AA000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE4223D67292008AA000 /* ViewController.swift */; };
@@ -28,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BADF64323D67728007A21E6 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
+		4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckInteractor.swift; sourceTree = "<group>"; };
+		4BADF64B23D67774007A21E6 /* WebAIMRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAIMRepository.swift; sourceTree = "<group>"; };
+		4BADF64F23D677C2007A21E6 /* WebAIMDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAIMDataAccess.swift; sourceTree = "<group>"; };
+		4BADF65123D6783F007A21E6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4BADF65423D67ED7007A21E6 /* WebAIMEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAIMEntity.swift; sourceTree = "<group>"; };
 		4BBABE3B23D67292008AA000 /* WorkArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBABE3E23D67292008AA000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BBABE4023D67292008AA000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +72,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BADF64223D67720007A21E6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64323D67728007A21E6 /* ViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4BADF64523D6773A007A21E6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64723D67747007A21E6 /* Ineteractor */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4BADF64623D6773F007A21E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64A23D67756007A21E6 /* Repository */,
+				4BADF64E23D677B4007A21E6 /* DataAccess */,
+				4BADF65323D67EC6007A21E6 /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4BADF64723D67747007A21E6 /* Ineteractor */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */,
+			);
+			path = Ineteractor;
+			sourceTree = "<group>";
+		};
+		4BADF64A23D67756007A21E6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64B23D67774007A21E6 /* WebAIMRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4BADF64D23D677A0007A21E6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF65123D6783F007A21E6 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4BADF64E23D677B4007A21E6 /* DataAccess */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64F23D677C2007A21E6 /* WebAIMDataAccess.swift */,
+			);
+			path = DataAccess;
+			sourceTree = "<group>";
+		};
+		4BADF65323D67EC6007A21E6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF65423D67ED7007A21E6 /* WebAIMEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		4BBABE3223D67292008AA000 = {
 			isa = PBXGroup;
 			children = (
@@ -81,10 +159,11 @@
 		4BBABE3D23D67292008AA000 /* WorkArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				4BBABE6223D67532008AA000 /* Presentation */,
+				4BADF64523D6773A007A21E6 /* Domain */,
+				4BADF64623D6773F007A21E6 /* Data */,
 				4BBABE3E23D67292008AA000 /* AppDelegate.swift */,
 				4BBABE4023D67292008AA000 /* SceneDelegate.swift */,
-				4BBABE4223D67292008AA000 /* ViewController.swift */,
-				4BBABE6023D674BB008AA000 /* ResultViewController.swift */,
 				4BBABE4423D67292008AA000 /* Main.storyboard */,
 				4BBABE4723D67293008AA000 /* Assets.xcassets */,
 				4BBABE4923D67293008AA000 /* LaunchScreen.storyboard */,
@@ -100,6 +179,25 @@
 				4BBABE5723D67293008AA000 /* Info.plist */,
 			);
 			path = WorkArchitectureTests;
+			sourceTree = "<group>";
+		};
+		4BBABE6223D67532008AA000 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4BBABE6323D6753E008AA000 /* View */,
+				4BADF64223D67720007A21E6 /* Presenter */,
+				4BADF64D23D677A0007A21E6 /* Router */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4BBABE6323D6753E008AA000 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BBABE4223D67292008AA000 /* ViewController.swift */,
+				4BBABE6023D674BB008AA000 /* ResultViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +301,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BADF64C23D67774007A21E6 /* WebAIMRepository.swift in Sources */,
+				4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */,
 				4BBABE4323D67292008AA000 /* ViewController.swift in Sources */,
 				4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */,
+				4BADF65223D6783F007A21E6 /* Router.swift in Sources */,
 				4BBABE4123D67292008AA000 /* SceneDelegate.swift in Sources */,
 				4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */,
+				4BADF65523D67ED7007A21E6 /* WebAIMEntity.swift in Sources */,
+				4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */,
+				4BADF65023D677C2007A21E6 /* WebAIMDataAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
