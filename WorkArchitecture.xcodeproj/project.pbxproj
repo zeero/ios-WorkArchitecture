@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1384AE23D9B563000FAE8A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AD23D9B563000FAE8A /* ViewController.xib */; };
+		4B1384B023D9B5C0000FAE8A /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */; };
 		4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64323D67728007A21E6 /* ViewPresenter.swift */; };
 		4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */; };
-		4BADF64C23D67774007A21E6 /* WebAIMRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64B23D67774007A21E6 /* WebAIMRepository.swift */; };
-		4BADF65023D677C2007A21E6 /* WebAIMDataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64F23D677C2007A21E6 /* WebAIMDataAccess.swift */; };
+		4BADF64C23D67774007A21E6 /* ContrastCheckRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */; };
 		4BADF65223D6783F007A21E6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65123D6783F007A21E6 /* Router.swift */; };
-		4BADF65523D67ED7007A21E6 /* WebAIMEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65423D67ED7007A21E6 /* WebAIMEntity.swift */; };
+		4BADF65523D67ED7007A21E6 /* ContrastCheckEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65423D67ED7007A21E6 /* ContrastCheckEntity.swift */; };
 		4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE3E23D67292008AA000 /* AppDelegate.swift */; };
 		4BBABE4123D67292008AA000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE4023D67292008AA000 /* SceneDelegate.swift */; };
 		4BBABE4323D67292008AA000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE4223D67292008AA000 /* ViewController.swift */; };
-		4BBABE4623D67292008AA000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBABE4423D67292008AA000 /* Main.storyboard */; };
 		4BBABE4823D67293008AA000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBABE4723D67293008AA000 /* Assets.xcassets */; };
 		4BBABE4B23D67293008AA000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBABE4923D67293008AA000 /* LaunchScreen.storyboard */; };
 		4BBABE5623D67293008AA000 /* WorkArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE5523D67293008AA000 /* WorkArchitectureTests.swift */; };
 		4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE6023D674BB008AA000 /* ResultViewController.swift */; };
+		4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */; };
+		4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B1384AD23D9B563000FAE8A /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		4BADF64323D67728007A21E6 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
 		4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckInteractor.swift; sourceTree = "<group>"; };
-		4BADF64B23D67774007A21E6 /* WebAIMRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAIMRepository.swift; sourceTree = "<group>"; };
-		4BADF64F23D677C2007A21E6 /* WebAIMDataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAIMDataAccess.swift; sourceTree = "<group>"; };
+		4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckRepository.swift; sourceTree = "<group>"; };
 		4BADF65123D6783F007A21E6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		4BADF65423D67ED7007A21E6 /* WebAIMEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAIMEntity.swift; sourceTree = "<group>"; };
+		4BADF65423D67ED7007A21E6 /* ContrastCheckEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckEntity.swift; sourceTree = "<group>"; };
 		4BBABE3B23D67292008AA000 /* WorkArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBABE3E23D67292008AA000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BBABE4023D67292008AA000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4BBABE4223D67292008AA000 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4BBABE4523D67292008AA000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BBABE4723D67293008AA000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BBABE4A23D67293008AA000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BBABE4C23D67293008AA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +54,8 @@
 		4BBABE5523D67293008AA000 /* WorkArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkArchitectureTests.swift; sourceTree = "<group>"; };
 		4BBABE5723D67293008AA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BBABE6023D674BB008AA000 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
+		4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4BADF64323D67728007A21E6 /* ViewPresenter.swift */,
+				4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -92,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				4BADF64A23D67756007A21E6 /* Repository */,
-				4BADF64E23D677B4007A21E6 /* DataAccess */,
 				4BADF65323D67EC6007A21E6 /* Entity */,
 			);
 			path = Data;
@@ -109,7 +113,7 @@
 		4BADF64A23D67756007A21E6 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				4BADF64B23D67774007A21E6 /* WebAIMRepository.swift */,
+				4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -118,22 +122,15 @@
 			isa = PBXGroup;
 			children = (
 				4BADF65123D6783F007A21E6 /* Router.swift */,
+				4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */,
 			);
 			path = Router;
-			sourceTree = "<group>";
-		};
-		4BADF64E23D677B4007A21E6 /* DataAccess */ = {
-			isa = PBXGroup;
-			children = (
-				4BADF64F23D677C2007A21E6 /* WebAIMDataAccess.swift */,
-			);
-			path = DataAccess;
 			sourceTree = "<group>";
 		};
 		4BADF65323D67EC6007A21E6 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				4BADF65423D67ED7007A21E6 /* WebAIMEntity.swift */,
+				4BADF65423D67ED7007A21E6 /* ContrastCheckEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -164,7 +161,6 @@
 				4BADF64623D6773F007A21E6 /* Data */,
 				4BBABE3E23D67292008AA000 /* AppDelegate.swift */,
 				4BBABE4023D67292008AA000 /* SceneDelegate.swift */,
-				4BBABE4423D67292008AA000 /* Main.storyboard */,
 				4BBABE4723D67293008AA000 /* Assets.xcassets */,
 				4BBABE4923D67293008AA000 /* LaunchScreen.storyboard */,
 				4BBABE4C23D67293008AA000 /* Info.plist */,
@@ -195,7 +191,9 @@
 			isa = PBXGroup;
 			children = (
 				4BBABE4223D67292008AA000 /* ViewController.swift */,
+				4B1384AD23D9B563000FAE8A /* ViewController.xib */,
 				4BBABE6023D674BB008AA000 /* ResultViewController.swift */,
+				4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,7 +281,8 @@
 			files = (
 				4BBABE4B23D67293008AA000 /* LaunchScreen.storyboard in Resources */,
 				4BBABE4823D67293008AA000 /* Assets.xcassets in Resources */,
-				4BBABE4623D67292008AA000 /* Main.storyboard in Resources */,
+				4B1384AE23D9B563000FAE8A /* ViewController.xib in Resources */,
+				4B1384B023D9B5C0000FAE8A /* ResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,16 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BADF64C23D67774007A21E6 /* WebAIMRepository.swift in Sources */,
+				4BADF64C23D67774007A21E6 /* ContrastCheckRepository.swift in Sources */,
 				4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */,
+				4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */,
 				4BBABE4323D67292008AA000 /* ViewController.swift in Sources */,
 				4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */,
 				4BADF65223D6783F007A21E6 /* Router.swift in Sources */,
 				4BBABE4123D67292008AA000 /* SceneDelegate.swift in Sources */,
 				4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */,
-				4BADF65523D67ED7007A21E6 /* WebAIMEntity.swift in Sources */,
+				4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */,
+				4BADF65523D67ED7007A21E6 /* ContrastCheckEntity.swift in Sources */,
 				4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */,
-				4BADF65023D677C2007A21E6 /* WebAIMDataAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,14 +333,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4BBABE4423D67292008AA000 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4BBABE4523D67292008AA000 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4BBABE4923D67293008AA000 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -8,10 +8,19 @@
 
 import UIKit
 
-protocol View {
-}
-
 class ViewController: UIViewController {
+
+    var presenter: ViewPresentation?
+
+    @IBOutlet private weak var fg: UITextField!
+    @IBOutlet private weak var bg: UITextField!
+
+    @IBAction private func tapped(_ sender: AnyObject) {
+        let fcolor = fg.text ?? ""
+        let bcolor = bg.text ?? ""
+        presenter?.checkContrast(fcolor: fcolor, bcolor: bcolor)
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,4 +28,15 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: View {}
+
+protocol View: class {
+    func showAlert(message: String)
+}
+
+extension ViewController: View {
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+}
