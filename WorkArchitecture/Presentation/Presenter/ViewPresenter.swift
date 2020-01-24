@@ -21,11 +21,11 @@ class ViewPresenter {
 
 
 protocol ViewPresentation {
-    func checkContrast(fcolor: String, bcolor: String)
+    func checkContrast(input: ContrastCheckInputModel)
 }
 
 extension ViewPresenter: ViewPresentation {
-    func checkContrast(fcolor: String, bcolor: String) {
+    func checkContrast(input: ContrastCheckInputModel) {
         let callback: (ContrastCheckEntity?) -> Void = { [weak self] entity in
             guard let entity = entity else {
                 self?._view?.showAlert(message: "データ取得に失敗しました")
@@ -36,6 +36,6 @@ extension ViewPresenter: ViewPresentation {
         }
 
         let interactor = dicon.resolve(ContrastCheckUseCase.self)
-        interactor?.getResult(fcolor: fcolor, bcolor: bcolor, callback: callback)
+        interactor?.getResult(input: input, callback: callback)
     }
 }

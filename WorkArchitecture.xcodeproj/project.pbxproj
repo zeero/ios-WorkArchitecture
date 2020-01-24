@@ -22,6 +22,7 @@
 		4BBABE5623D67293008AA000 /* WorkArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE5523D67293008AA000 /* WorkArchitectureTests.swift */; };
 		4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE6023D674BB008AA000 /* ResultViewController.swift */; };
 		4BC9B81A23DA734700BE0F99 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B81923DA734700BE0F99 /* DIContainer.swift */; };
+		4BC9B81E23DACBFD00BE0F99 /* ContrastCheckInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */; };
 		4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */; };
 		4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		4BBABE5723D67293008AA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BBABE6023D674BB008AA000 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4BC9B81923DA734700BE0F99 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckInputModel.swift; sourceTree = "<group>"; };
 		4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
 		4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				4BADF64723D67747007A21E6 /* Ineteractor */,
+				4BC9B81B23DACBAE00BE0F99 /* DomainModel */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -209,6 +212,22 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		4BC9B81B23DACBAE00BE0F99 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BC9B81C23DACBBD00BE0F99 /* InputModel */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		4BC9B81C23DACBBD00BE0F99 /* InputModel */ = {
+			isa = PBXGroup;
+			children = (
+				4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */,
+			);
+			path = InputModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -315,6 +334,7 @@
 				4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */,
 				4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */,
 				4BBABE4323D67292008AA000 /* ViewController.swift in Sources */,
+				4BC9B81E23DACBFD00BE0F99 /* ContrastCheckInputModel.swift in Sources */,
 				4BC9B81A23DA734700BE0F99 /* DIContainer.swift in Sources */,
 				4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */,
 				4BADF65223D6783F007A21E6 /* Router.swift in Sources */,

@@ -16,9 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet private weak var bg: UITextField!
 
     @IBAction private func tapped(_ sender: AnyObject) {
-        let fcolor = fg.text ?? ""
-        let bcolor = bg.text ?? ""
-        presenter?.checkContrast(fcolor: fcolor, bcolor: bcolor)
+        let fgText = fg.text ?? ""
+        let bgText = bg.text ?? ""
+        let input = ContrastCheckInputModel(fg: fgText, bg: bgText)
+        presenter?.checkContrast(input: input)
     }
 
 

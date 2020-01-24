@@ -15,17 +15,17 @@ struct ContrastCheckInteractor {
 // データ変換を担うべき
 // オブザーバ同期への変換を担当する
 protocol ContrastCheckUseCase {
-    func getResult(fcolor: String, bcolor: String, callback: @escaping (ContrastCheckEntity?) -> Void)
+    func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void)
 }
 
 extension ContrastCheckInteractor: ContrastCheckUseCase {
-    func getResult(fcolor: String, bcolor: String, callback: @escaping (ContrastCheckEntity?) -> Void) {
+    func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void) {
         let closure: (ContrastCheckEntity?) -> Void = { entity in
             DispatchQueue.main.async {
                 callback(entity)
             }
         }
         let repository = dicon.resolve(ContrastCheckRepository.self)
-        repository?.fetchResult(fcolor: fcolor, bcolor: bcolor, callback: closure)
+        repository?.fetchResult(input: input, callback: closure)
     }
 }

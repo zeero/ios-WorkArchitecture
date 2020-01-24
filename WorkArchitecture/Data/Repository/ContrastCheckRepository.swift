@@ -10,11 +10,11 @@ import Foundation
 
 struct WebAIMAPI {
 
-    private func contrastChecker(fcolor: String, bcolor: String, callback: @escaping (ContrastCheckEntity?) -> Void) {
+    private func contrastChecker(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void) {
         var components = URLComponents(string: "https://webaim.org/resources/contrastchecker/")!
         let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "fcolor", value: fcolor),
-            URLQueryItem(name: "bcolor", value: bcolor),
+            URLQueryItem(name: "fcolor", value: input.fg),
+            URLQueryItem(name: "bcolor", value: input.bg),
             URLQueryItem(name: "api", value: nil)
         ]
         components.queryItems = queryItems
@@ -36,11 +36,11 @@ struct WebAIMAPI {
 
 
 protocol ContrastCheckRepository {
-    func fetchResult(fcolor: String, bcolor: String, callback: @escaping (ContrastCheckEntity?) -> Void)
+    func fetchResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void)
 }
 
 extension WebAIMAPI: ContrastCheckRepository {
-    func fetchResult(fcolor: String, bcolor: String, callback: @escaping (ContrastCheckEntity?) -> Void) {
-        contrastChecker(fcolor: fcolor, bcolor: bcolor, callback: callback)
+    func fetchResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void) {
+        contrastChecker(input: input, callback: callback)
     }
 }
