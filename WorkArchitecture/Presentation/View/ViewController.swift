@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var presenter: ViewPresentation?
+    private let _presenter: ViewPresentation
 
     @IBOutlet private weak var fg: UITextField!
     @IBOutlet private weak var bg: UITextField!
@@ -18,7 +18,17 @@ class ViewController: UIViewController {
     @IBAction private func tapped(_ sender: AnyObject) {
         let fcolor = fg.text ?? ""
         let bcolor = bg.text ?? ""
-        presenter?.checkContrast(fcolor: fcolor, bcolor: bcolor)
+        _presenter.checkContrast(fcolor: fcolor, bcolor: bcolor)
+    }
+
+
+    init(presenter: ViewPresentation) {
+        _presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 

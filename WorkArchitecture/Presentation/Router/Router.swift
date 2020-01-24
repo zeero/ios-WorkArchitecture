@@ -10,20 +10,17 @@ import UIKit
 
 struct Router {
 
-    private unowned let viewController: UIViewController
-
-    private init(viewController vc: UIViewController) {
-        viewController = vc
-    }
+    private unowned var viewController: UIViewController?
 
     static func assembleModules() -> UIViewController {
-        let view = ViewController()
-        let router = Router(viewController: view)
+        var router = Router()
         let checkInteractor = ContrastCheckInteractor(repository: WebAIMAPI())
 
-        let presenter = ViewPresenter(view: view, router: router, checkInteractor: checkInteractor)
+        let presenter = ViewPresenter(router: router, checkInteractor: checkInteractor)
+        let view = ViewController(presenter: presenter)
 
-        view.presenter = presenter
+        presenter.view = view
+        router.viewController = view
 
         return view
     }
@@ -38,6 +35,6 @@ extension Router: Wireframe {
     func showResult(_ entity: ContrastCheckEntity) {
         let view = ResultRouter.assembleModules(entity: entity)
 
-        viewController.navigationController?.pushViewController(view, animated: true)
+        viewController?.navigationController?.pushViewController(view, animated: true)
     }
 }

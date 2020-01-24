@@ -10,12 +10,11 @@ import Foundation
 
 class ViewPresenter {
 
-    private weak var _view: View?
+    weak var view: View?
     private let _router: Wireframe
     private let _checkInteractor: ContrastCheckUseCase
 
-    init(view: View, router: Wireframe, checkInteractor: ContrastCheckUseCase) {
-        _view = view
+    init(router: Wireframe, checkInteractor: ContrastCheckUseCase) {
         _router = router
         _checkInteractor = checkInteractor
     }
@@ -30,7 +29,7 @@ extension ViewPresenter: ViewPresentation {
     func checkContrast(fcolor: String, bcolor: String) {
         let callback: (ContrastCheckEntity?) -> Void = { [weak self] entity in
             guard let entity = entity else {
-                self?._view?.showAlert(message: "データ取得に失敗しました")
+                self?.view?.showAlert(message: "データ取得に失敗しました")
                 return
             }
 
