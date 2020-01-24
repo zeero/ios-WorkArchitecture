@@ -12,12 +12,10 @@ class ViewPresenter {
 
     private weak var _view: View?
     private let _router: Wireframe
-    private let _checkInteractor: ContrastCheckUseCase
 
-    init(view: View, router: Wireframe, checkInteractor: ContrastCheckUseCase) {
+    init(view: View, router: Wireframe) {
         _view = view
         _router = router
-        _checkInteractor = checkInteractor
     }
 }
 
@@ -37,6 +35,7 @@ extension ViewPresenter: ViewPresentation {
             self?._router.showResult(entity)
         }
 
-        _checkInteractor.getResult(fcolor: fcolor, bcolor: bcolor, callback: callback)
+        let interactor = dicon.resolve(ContrastCheckUseCase.self)
+        interactor?.getResult(fcolor: fcolor, bcolor: bcolor, callback: callback)
     }
 }

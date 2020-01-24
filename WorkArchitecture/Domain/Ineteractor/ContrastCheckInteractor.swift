@@ -9,12 +9,6 @@
 import Foundation
 
 struct ContrastCheckInteractor {
-
-    private let _repository: ContrastCheckRepository
-
-    init(repository: ContrastCheckRepository) {
-        _repository = repository
-    }
 }
 
 
@@ -31,6 +25,7 @@ extension ContrastCheckInteractor: ContrastCheckUseCase {
                 callback(entity)
             }
         }
-        _repository.fetchResult(fcolor: fcolor, bcolor: bcolor, callback: closure)
+        let repository = dicon.resolve(ContrastCheckRepository.self)
+        repository?.fetchResult(fcolor: fcolor, bcolor: bcolor, callback: closure)
     }
 }

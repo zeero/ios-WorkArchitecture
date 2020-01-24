@@ -19,9 +19,8 @@ struct Router {
     static func assembleModules() -> UIViewController {
         let view = ViewController()
         let router = Router(viewController: view)
-        let checkInteractor = ContrastCheckInteractor(repository: WebAIMAPI())
 
-        let presenter = ViewPresenter(view: view, router: router, checkInteractor: checkInteractor)
+        let presenter = ViewPresenter(view: view, router: router)
 
         view.presenter = presenter
 
