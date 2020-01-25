@@ -11,13 +11,13 @@ import UIKit
 class ResultViewController: UIViewController {
 
     var presenter: ResultViewPresentation?
-    private let _entity: ContrastCheckEntity
+    private let _model: ResultViewModel
 
     @IBOutlet private weak var result: UILabel!
 
 
-    init(entity: ContrastCheckEntity) {
-        _entity = entity
+    init(model: ResultViewModel) {
+        _model = model
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -30,7 +30,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        result.text = _entity.ratio
+        result.text = _model.ratio
     }
 }
 

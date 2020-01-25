@@ -30,12 +30,12 @@ struct Router {
 
 
 protocol Wireframe {
-    func showResult(_ entity: ContrastCheckEntity)
+    func showResult(_ model: ResultViewModel)
 }
 
 extension Router: Wireframe {
-    func showResult(_ entity: ContrastCheckEntity) {
-        let view = ResultRouter.assembleModules(entity: entity)
+    func showResult(_ model: ResultViewModel) {
+        let view = ResultRouter.assembleModules(model: model)
 
         viewController.navigationController?.pushViewController(view, animated: true)
     }

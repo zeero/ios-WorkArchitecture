@@ -10,6 +10,7 @@
 		4B1384AE23D9B563000FAE8A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AD23D9B563000FAE8A /* ViewController.xib */; };
 		4B1384B023D9B5C0000FAE8A /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */; };
 		4B5B9E2523DC7A0E00F51068 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2423DC7A0E00F51068 /* AppError.swift */; };
+		4B5B9E2823DC8CD600F51068 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */; };
 		4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64323D67728007A21E6 /* ViewPresenter.swift */; };
 		4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */; };
 		4BADF64C23D67774007A21E6 /* ContrastCheckRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */; };
@@ -47,6 +48,7 @@
 		4B1384AD23D9B563000FAE8A /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 		4B5B9E2423DC7A0E00F51068 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		4BADF64323D67728007A21E6 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
 		4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckInteractor.swift; sourceTree = "<group>"; };
 		4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckRepository.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B5B9E2623DC8CBC00F51068 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4BADF64223D67720007A21E6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC9B81C23DACBBD00BE0F99 /* InputModel */,
+				4B5B9E2623DC8CBC00F51068 /* ViewModel */,
 			);
 			path = DomainModel;
 			sourceTree = "<group>";
@@ -433,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BADF64C23D67774007A21E6 /* ContrastCheckRepository.swift in Sources */,
+				4B5B9E2823DC8CD600F51068 /* ResultViewModel.swift in Sources */,
 				4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */,
 				4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */,
 				4BBABE4323D67292008AA000 /* ViewController.swift in Sources */,

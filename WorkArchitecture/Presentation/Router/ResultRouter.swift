@@ -12,8 +12,8 @@ protocol ResultWireframe {}
 
 struct ResultRouter {
 
-    static func assembleModules(entity: ContrastCheckEntity) -> UIViewController {
-        let view = ResultViewController(entity: entity)
+    static func assembleModules(model: ResultViewModel) -> UIViewController {
+        let view = ResultViewController(model :model)
 
         return view
     }
