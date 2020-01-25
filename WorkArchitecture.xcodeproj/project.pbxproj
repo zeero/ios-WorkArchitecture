@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4B1384AE23D9B563000FAE8A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AD23D9B563000FAE8A /* ViewController.xib */; };
 		4B1384B023D9B5C0000FAE8A /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */; };
+		4B5B9E2523DC7A0E00F51068 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2423DC7A0E00F51068 /* AppError.swift */; };
 		4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64323D67728007A21E6 /* ViewPresenter.swift */; };
 		4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */; };
 		4BADF64C23D67774007A21E6 /* ContrastCheckRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */; };
@@ -45,6 +46,7 @@
 		43C42AE94A20F33FC0B2ED15 /* Pods-WorkArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkArchitecture.release.xcconfig"; path = "Target Support Files/Pods-WorkArchitecture/Pods-WorkArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		4B1384AD23D9B563000FAE8A /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		4B5B9E2423DC7A0E00F51068 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		4BADF64323D67728007A21E6 /* ViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresenter.swift; sourceTree = "<group>"; };
 		4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckInteractor.swift; sourceTree = "<group>"; };
 		4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckRepository.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				4BBABE3E23D67292008AA000 /* AppDelegate.swift */,
 				4BBABE4023D67292008AA000 /* SceneDelegate.swift */,
 				4BC9B81923DA734700BE0F99 /* DIContainer.swift */,
+				4B5B9E2423DC7A0E00F51068 /* AppError.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -257,7 +260,6 @@
 				AC3A8ACC021B3F7064403038 /* Pods-WorkArchitectureTests.debug.xcconfig */,
 				6E5505678B93C80F3736B672 /* Pods-WorkArchitectureTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -438,6 +440,7 @@
 				4BC9B81A23DA734700BE0F99 /* DIContainer.swift in Sources */,
 				4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */,
 				4BADF65223D6783F007A21E6 /* Router.swift in Sources */,
+				4B5B9E2523DC7A0E00F51068 /* AppError.swift in Sources */,
 				4BBABE4123D67292008AA000 /* SceneDelegate.swift in Sources */,
 				4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */,
 				4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */,
