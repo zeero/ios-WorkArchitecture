@@ -7,8 +7,25 @@
 //
 
 import Foundation
+import RxSwift
 
 struct WebAIMAPI {
+
+    private func contrastChecker(input: ContrastCheckInputModel) -> Observable<ContrastCheckEntity> {
+        return Observable.create { observer in
+            let callback: (ContrastCheckEntity?) -> Void = { entity in
+                if let entity = entity {
+                    observer.onNext(entity)
+                    observer.onCompleted()
+                } else {
+                    observer.onError(AppError.apiError)
+                }
+            }
+            self.contrastChecker(input: input, callback: callback)
+
+            return Disposables.create()
+        }
+    }
 
     private func contrastChecker(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void) {
         var components = URLComponents(string: "https://webaim.org/resources/contrastchecker/")!
@@ -36,10 +53,15 @@ struct WebAIMAPI {
 
 
 protocol ContrastCheckRepository {
+    func fetchResult(input: ContrastCheckInputModel) -> Observable<ContrastCheckEntity>
     func fetchResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void)
 }
 
 extension WebAIMAPI: ContrastCheckRepository {
+    func fetchResult(input: ContrastCheckInputModel) -> Observable<ContrastCheckEntity> {
+        return contrastChecker(input: input)
+    }
+
     func fetchResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void) {
         contrastChecker(input: input, callback: callback)
     }

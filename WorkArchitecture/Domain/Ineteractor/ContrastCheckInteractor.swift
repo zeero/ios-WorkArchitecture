@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 struct ContrastCheckInteractor {
 }
@@ -15,10 +16,16 @@ struct ContrastCheckInteractor {
 // データ変換を担うべき
 // オブザーバ同期への変換を担当する
 protocol ContrastCheckUseCase {
+    func getResult(input: ContrastCheckInputModel) -> Observable<ContrastCheckEntity>
     func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void)
 }
 
 extension ContrastCheckInteractor: ContrastCheckUseCase {
+    func getResult(input: ContrastCheckInputModel) -> Observable<ContrastCheckEntity> {
+        guard let repository = dicon.resolve(ContrastCheckRepository.self) else { return .error(AppError.unknown) }
+        return repository.fetchResult(input: input).observeOn(MainScheduler.asyncInstance)
+    }
+
     func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void) {
         let closure: (ContrastCheckEntity?) -> Void = { entity in
             DispatchQueue.main.async {

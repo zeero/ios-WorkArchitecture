@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 
 class ViewPresenter {
+
+    private let disposeBag = DisposeBag()
 
     private weak var _view: View?
     private let _router: Wireframe
@@ -26,6 +29,18 @@ protocol ViewPresentation {
 
 extension ViewPresenter: ViewPresentation {
     func checkContrast(input: ContrastCheckInputModel) {
+        guard let interactor = dicon.resolve(ContrastCheckUseCase.self) else { return }
+        interactor.getResult(input: input).subscribe(
+            onNext: { [weak self] entity in
+                self?._router.showResult(entity)
+            },
+            onError: { [weak self] error in
+                self?._view?.showAlert(message: "データ取得に失敗しました")
+            }
+        ).disposed(by: disposeBag)
+    }
+
+    func _checkContrast(input: ContrastCheckInputModel) {
         let callback: (ContrastCheckEntity?) -> Void = { [weak self] entity in
             guard let entity = entity else {
                 self?._view?.showAlert(message: "データ取得に失敗しました")
