@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var presenter: ViewPresentation?
+    private var _presenter: ViewPresentation?
 
     @IBOutlet private weak var fg: UITextField!
     @IBOutlet private weak var bg: UITextField!
@@ -19,13 +19,19 @@ class ViewController: UIViewController {
         let fgText = fg.text ?? ""
         let bgText = bg.text ?? ""
         let input = ContrastCheckInputModel(fg: fgText, bg: bgText)
-        presenter?.checkContrast(input: input)
+        _presenter?.checkContrast(input: input)
     }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    
+    /// プロトコルに公開しないことでRouterからのアクセスに限定する
+    func inject(presenter: ViewPresentation) {
+        _presenter = presenter
     }
 }
 

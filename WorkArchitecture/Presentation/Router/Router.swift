@@ -22,7 +22,7 @@ struct Router {
 
         let presenter = ViewPresenter(view: view, router: router)
 
-        view.presenter = presenter
+        view.inject(presenter: presenter)
 
         return view
     }
