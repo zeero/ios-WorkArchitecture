@@ -10,10 +10,10 @@ import UIKit
 
 struct Router {
 
-    private unowned let viewController: UIViewController
+    private unowned let _viewController: UIViewController
 
-    private init(viewController vc: UIViewController) {
-        viewController = vc
+    private init(viewController: UIViewController) {
+        _viewController = viewController
     }
 
     static func assembleModules() -> UIViewController {
@@ -37,6 +37,6 @@ extension Router: Wireframe {
     func showResult(_ model: ResultViewModel) {
         let view = ResultRouter.assembleModules(model: model)
 
-        viewController.navigationController?.pushViewController(view, animated: true)
+        _viewController.navigationController?.pushViewController(view, animated: true)
     }
 }
