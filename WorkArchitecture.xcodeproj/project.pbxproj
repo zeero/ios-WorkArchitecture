@@ -15,7 +15,7 @@
 		4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */; };
 		4BADF64C23D67774007A21E6 /* ContrastCheckRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */; };
 		4BADF65223D6783F007A21E6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65123D6783F007A21E6 /* Router.swift */; };
-		4BADF65523D67ED7007A21E6 /* ContrastCheckEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65423D67ED7007A21E6 /* ContrastCheckEntity.swift */; };
+		4BADF65523D67ED7007A21E6 /* ContrastCheckDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BADF65423D67ED7007A21E6 /* ContrastCheckDataModel.swift */; };
 		4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE3E23D67292008AA000 /* AppDelegate.swift */; };
 		4BBABE4123D67292008AA000 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE4023D67292008AA000 /* SceneDelegate.swift */; };
 		4BBABE4323D67292008AA000 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE4223D67292008AA000 /* ViewController.swift */; };
@@ -53,7 +53,7 @@
 		4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckInteractor.swift; sourceTree = "<group>"; };
 		4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckRepository.swift; sourceTree = "<group>"; };
 		4BADF65123D6783F007A21E6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		4BADF65423D67ED7007A21E6 /* ContrastCheckEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckEntity.swift; sourceTree = "<group>"; };
+		4BADF65423D67ED7007A21E6 /* ContrastCheckDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckDataModel.swift; sourceTree = "<group>"; };
 		4BBABE3B23D67292008AA000 /* WorkArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BBABE3E23D67292008AA000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BBABE4023D67292008AA000 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				4BADF64A23D67756007A21E6 /* Repository */,
-				4BADF65323D67EC6007A21E6 /* Entity */,
+				4BADF65323D67EC6007A21E6 /* DataModel */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -154,12 +154,12 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		4BADF65323D67EC6007A21E6 /* Entity */ = {
+		4BADF65323D67EC6007A21E6 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				4BADF65423D67ED7007A21E6 /* ContrastCheckEntity.swift */,
+				4BADF65423D67ED7007A21E6 /* ContrastCheckDataModel.swift */,
 			);
-			path = Entity;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		4BBABE3223D67292008AA000 = {
@@ -456,7 +456,7 @@
 				4BBABE4123D67292008AA000 /* SceneDelegate.swift in Sources */,
 				4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */,
 				4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */,
-				4BADF65523D67ED7007A21E6 /* ContrastCheckEntity.swift in Sources */,
+				4BADF65523D67ED7007A21E6 /* ContrastCheckDataModel.swift in Sources */,
 				4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

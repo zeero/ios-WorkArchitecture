@@ -63,7 +63,7 @@ extension ViewPresenter: ViewPresentation {
     }
 
 //    func _checkContrast(input: ContrastCheckInputModel) {
-//        let callback: (ContrastCheckEntity?) -> Void = { [weak self] entity in
+//        let callback: (ContrastCheckDataModel?) -> Void = { [weak self] entity in
 //            guard let entity = entity else {
 //                self?._view?.showAlert(message: "データ取得に失敗しました")
 //                return

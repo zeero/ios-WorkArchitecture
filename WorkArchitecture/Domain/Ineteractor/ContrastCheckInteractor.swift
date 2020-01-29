@@ -17,7 +17,7 @@ struct ContrastCheckInteractor {
 // オブザーバ同期への変換を担当する
 protocol ContrastCheckUseCase {
     func getResult(input: ContrastCheckInputModel) -> Observable<ResultViewModel>
-    func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void)
+    func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckDataModel?) -> Void)
 }
 
 extension ContrastCheckInteractor: ContrastCheckUseCase {
@@ -28,8 +28,8 @@ extension ContrastCheckInteractor: ContrastCheckUseCase {
             .observeOn(MainScheduler.asyncInstance)
     }
 
-    func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckEntity?) -> Void) {
-        let closure: (ContrastCheckEntity?) -> Void = { entity in
+    func getResult(input: ContrastCheckInputModel, callback: @escaping (ContrastCheckDataModel?) -> Void) {
+        let closure: (ContrastCheckDataModel?) -> Void = { entity in
             DispatchQueue.main.async {
                 callback(entity)
             }

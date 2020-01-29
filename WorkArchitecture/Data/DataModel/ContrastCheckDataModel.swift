@@ -1,5 +1,5 @@
 //
-//  ContrastCheckEntity.swift
+//  ContrastCheckDataModel.swift
 //  WorkArchitecture
 //
 //  Created by zeero on 2020/01/21.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ContrastCheckEntity: Codable {
+struct ContrastCheckDataModel: Codable {
     let ratio: String
     let AA: String
     let AALarge: String
