@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="WorkArchitecture" customModuleProvider="target">
             <connections>
                 <outlet property="bg" destination="fDF-Mg-8Ye" id="xOJ-2e-FUz"/>
+                <outlet property="button" destination="xNJ-xh-5xA" id="Wzr-UW-8gt"/>
                 <outlet property="fg" destination="8dM-NE-UzW" id="BAS-fA-xV2"/>
                 <outlet property="view" destination="SIE-EQ-nZi" id="mb1-Ta-yRB"/>
             </connections>

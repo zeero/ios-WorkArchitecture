@@ -8,10 +8,14 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 class ViewPresenter {
-
+    
     private let disposeBag = DisposeBag()
+    private let fg = BehaviorRelay<String?>(value: nil)
+    private let bg = BehaviorRelay<String?>(value: nil)
+    private let buttonTap = PublishRelay<Void>()
 
     private weak var _view: View?
     private let _router: Wireframe
@@ -19,15 +23,33 @@ class ViewPresenter {
     init(view: View, router: Wireframe) {
         _view = view
         _router = router
+        
+        buttonTap.subscribe(onNext: { [weak self] in
+            guard let fg = self?.inputPort.fg.value, let bg = self?.inputPort.bg.value else { return }
+            let input = ContrastCheckInputModel(fg: fg, bg: bg)
+            self?.checkContrast(input: input)
+            }).disposed(by: disposeBag)
     }
 }
 
 
 protocol ViewPresentation {
+    typealias InputPort = (
+        fg: BehaviorRelay<String?>,
+        bg: BehaviorRelay<String?>,
+        buttonTap: PublishRelay<Void>
+    )
+    
+    var inputPort: InputPort { get }
+    
     func checkContrast(input: ContrastCheckInputModel)
 }
 
 extension ViewPresenter: ViewPresentation {
+    var inputPort: InputPort {
+        return (fg: fg, bg: bg, buttonTap: buttonTap)
+    }
+    
     func checkContrast(input: ContrastCheckInputModel) {
         guard let interactor = dicon.resolve(ContrastCheckUseCase.self) else { return }
         interactor.getResult(input: input).subscribe(
