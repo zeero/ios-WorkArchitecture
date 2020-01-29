@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
 
-        let vc = Router.assembleModules()
+        let vc = Router.buildUp()
         let navi = UINavigationController(rootViewController: vc)
 
         window?.rootViewController = navi

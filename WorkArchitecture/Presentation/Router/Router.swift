@@ -16,7 +16,7 @@ struct Router {
         _viewController = viewController
     }
 
-    static func assembleModules() -> UIViewController {
+    static func buildUp() -> UIViewController {
         let view = ViewController()
         let router = Router(viewController: view)
 
@@ -35,7 +35,7 @@ protocol Wireframe {
 
 extension Router: Wireframe {
     func showResult(_ model: ResultViewModel) {
-        let view = ResultRouter.assembleModules(model: model)
+        let view = ResultRouter.buildUp(model: model)
 
         _viewController.navigationController?.pushViewController(view, animated: true)
     }

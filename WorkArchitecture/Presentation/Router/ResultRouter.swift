@@ -12,7 +12,7 @@ protocol ResultWireframe {}
 
 struct ResultRouter {
 
-    static func assembleModules(model: ResultViewModel) -> UIViewController {
+    static func buildUp(model: ResultViewModel) -> UIViewController {
         let view = ResultViewController(model :model)
 
         return view

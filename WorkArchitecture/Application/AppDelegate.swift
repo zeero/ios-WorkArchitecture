@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow()
 
-        let vc = Router.assembleModules()
+        let vc = Router.buildUp()
         let navi = UINavigationController(rootViewController: vc)
 
         window?.rootViewController = navi
