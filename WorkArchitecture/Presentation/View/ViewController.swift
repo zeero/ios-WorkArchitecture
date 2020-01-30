@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         bg: bg.rx.text,
         buttonTap: button.rx.tap
     )
+    private lazy var inputPort = (
+        fgBackgroundColor: fg.rx.backgroundColor,
+        bgBackgroundColor: bg.rx.backgroundColor
+    )
 
     @IBOutlet private weak var fg: UITextField!
     @IBOutlet private weak var bg: UITextField!
@@ -40,6 +44,8 @@ class ViewController: UIViewController {
         outputPort.fg.bind(to: _presenter.inputPort.fg).disposed(by: disposeBag)
         outputPort.bg.bind(to: _presenter.inputPort.bg).disposed(by: disposeBag)
         outputPort.buttonTap.bind(to: _presenter.inputPort.buttonTap).disposed(by: disposeBag)
+        _presenter.outputPort.fgBackgroundColor.bind(to: inputPort.fgBackgroundColor).disposed(by: disposeBag)
+        _presenter.outputPort.bgBackgroundColor.bind(to: inputPort.bgBackgroundColor).disposed(by: disposeBag)
     }
     
     
@@ -52,12 +58,17 @@ class ViewController: UIViewController {
 
 protocol View: class {
     func showAlert(message: String)
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
 }
 
 extension ViewController: View {
     func showAlert(message: String) {
+        showAlert(message: message, handler: nil)
+    }
+    
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
         present(alert, animated: true, completion: nil)
     }
 }

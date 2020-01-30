@@ -34,6 +34,7 @@ let dicon: DIContainer = {
     let dicon = DIContainer()
 
     // MARK: ContrastCheck
+    dicon.register(ColorCodeValidateUseCase.self, factory: { return ColorCodeValidateInteractor() })
     dicon.register(ContrastCheckUseCase.self, factory: { return ContrastCheckInteractor() })
     dicon.register(ContrastCheckRepository.self, factory: { return WebAIMAPI() })
 
