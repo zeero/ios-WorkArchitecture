@@ -34,5 +34,5 @@ class ResultViewController: UIViewController {
     }
 }
 
-protocol ResultView {}
+protocol ResultView: Transitionar {}
 extension ResultViewController: ResultView {}

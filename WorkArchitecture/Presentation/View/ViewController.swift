@@ -56,7 +56,7 @@ class ViewController: UIViewController {
 }
 
 
-protocol View: class {
+protocol View: Transitionar {
     func showAlert(message: String)
     func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
 }

@@ -10,15 +10,15 @@ import UIKit
 
 struct Router {
 
-    private unowned let _viewController: UIViewController
+    private unowned let _transitionar: Transitionar
 
-    private init(viewController: UIViewController) {
-        _viewController = viewController
+    private init(transitionar: Transitionar) {
+        _transitionar = transitionar
     }
 
     static func buildUp() -> UIViewController {
         let view = ViewController()
-        let router = Router(viewController: view)
+        let router = Router(transitionar: view)
 
         let presenter = ViewPresenter(view: view, router: router)
 
@@ -37,6 +37,6 @@ extension Router: Wireframe {
     func showResult(_ model: ResultViewModel) {
         let view = ResultRouter.buildUp(model: model)
 
-        _viewController.navigationController?.pushViewController(view, animated: true)
+        _transitionar.pushViewController(view, animated: true)
     }
 }
