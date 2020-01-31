@@ -96,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B31350023E4655100558FAB /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				4BBABE6223D67532008AA000 /* Presentation */,
+				4BADF64523D6773A007A21E6 /* Domain */,
+				4BADF64623D6773F007A21E6 /* Data */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
 		4B5B9E2623DC8CBC00F51068 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,9 +198,7 @@
 		4BBABE3D23D67292008AA000 /* WorkArchitecture */ = {
 			isa = PBXGroup;
 			children = (
-				4BBABE6223D67532008AA000 /* Presentation */,
-				4BADF64523D6773A007A21E6 /* Domain */,
-				4BADF64623D6773F007A21E6 /* Data */,
+				4B31350023E4655100558FAB /* VIPER */,
 				4BC9B81823DA731600BE0F99 /* Application */,
 				4BBABE4723D67293008AA000 /* Assets.xcassets */,
 				4BBABE4923D67293008AA000 /* LaunchScreen.storyboard */,
