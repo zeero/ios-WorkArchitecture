@@ -19,11 +19,9 @@ class ViewPresenter {
     private let fgBackgroundColor = BehaviorRelay<UIColor>(value: .white)
     private let bgBackgroundColor = BehaviorRelay<UIColor>(value: .white)
 
-    private weak var _view: View?
     private let _router: Wireframe
 
-    init(view: View, router: Wireframe) {
-        _view = view
+    init(router: Wireframe) {
         _router = router
         
         buttonTap.subscribe(
@@ -48,7 +46,7 @@ class ViewPresenter {
                 self?.outputPort.fgBackgroundColor.accept(isValidFg ? .white : .red)
                 self?.outputPort.bgBackgroundColor.accept(isValidBg ? .white : .red)
             }
-            _view?.showAlert(message: "不正な値です", handler: handler)
+            _router.showAlert(message: "不正な値です", handler: handler)
         }
     }
     
@@ -93,7 +91,7 @@ extension ViewPresenter: ViewPresentation {
                 self?._router.showResult(model)
             },
             onError: { [weak self] error in
-                self?._view?.showAlert(message: "データ取得に失敗しました")
+                self?._router.showAlert(message: "データ取得に失敗しました")
             }
         ).disposed(by: disposeBag)
     }

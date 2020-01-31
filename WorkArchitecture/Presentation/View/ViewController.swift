@@ -54,21 +54,3 @@ class ViewController: UIViewController {
         _presenter = presenter
     }
 }
-
-
-protocol View: class {
-    func showAlert(message: String)
-    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
-}
-
-extension ViewController: View {
-    func showAlert(message: String) {
-        showAlert(message: message, handler: nil)
-    }
-    
-    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?) {
-        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
-        present(alert, animated: true, completion: nil)
-    }
-}

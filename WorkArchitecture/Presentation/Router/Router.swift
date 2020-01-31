@@ -20,7 +20,7 @@ struct Router {
         let view = ViewController()
         let router = Router(viewController: view)
 
-        let presenter = ViewPresenter(view: view, router: router)
+        let presenter = ViewPresenter(router: router)
 
         view.inject(presenter: presenter)
 
@@ -30,10 +30,22 @@ struct Router {
 
 
 protocol Wireframe {
+    func showAlert(message: String)
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
     func showResult(_ model: ResultViewModel)
 }
 
 extension Router: Wireframe {
+    func showAlert(message: String) {
+        showAlert(message: message, handler: nil)
+    }
+    
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
+        _viewController.present(alert, animated: true, completion: nil)
+    }
+    
     func showResult(_ model: ResultViewModel) {
         let view = ResultRouter.buildUp(model: model)
 
