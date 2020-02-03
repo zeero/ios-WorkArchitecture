@@ -17,13 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         if #available(iOS 13.0.0, *) { return true }
 
-        window = UIWindow()
-
-        let vc = Router.buildUp()
-        let navi = UINavigationController(rootViewController: vc)
-
-        window?.rootViewController = navi
-        window?.makeKeyAndVisible()
+//        window = UIWindow()
+//
+//        let vc = Router.buildUp()
+//        let navi = UINavigationController(rootViewController: vc)
+//
+//        window?.rootViewController = navi
+//        window?.makeKeyAndVisible()
 
         return true
     }

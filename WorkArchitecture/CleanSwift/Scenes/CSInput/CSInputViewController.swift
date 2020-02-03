@@ -21,6 +21,18 @@ class CSInputViewController: UIViewController, CSInputDisplayLogic {
     var interactor: CSInputBusinessLogic?
     var router: (NSObjectProtocol & CSInputRoutingLogic & CSInputDataPassing)?
     
+    
+    @IBOutlet private weak var fg: UITextField!
+    @IBOutlet private weak var bg: UITextField!
+    @IBOutlet private weak var button: UIButton!
+    
+    @IBAction private func tapped(_ sender: AnyObject) {
+//        let fgText = fg.text ?? ""
+//        let bgText = bg.text ?? ""
+//        let input = ContrastCheckInputModel(fg: fgText, bg: bgText)
+//        _presenter?.checkContrast(input: input)
+    }
+    
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
