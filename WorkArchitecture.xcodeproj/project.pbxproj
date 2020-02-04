@@ -16,6 +16,14 @@
 		4B31351A23E4695F00558FAB /* CSInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31351423E4695F00558FAB /* CSInputViewController.swift */; };
 		4B31351B23E4695F00558FAB /* CSInputInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31351523E4695F00558FAB /* CSInputInteractor.swift */; };
 		4B31351D23E79C1400558FAB /* CSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B31351C23E79C1400558FAB /* CSMain.storyboard */; };
+		4B31352523E7A12000558FAB /* CSResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31351F23E7A12000558FAB /* CSResultPresenter.swift */; };
+		4B31352623E7A12000558FAB /* CSResultWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31352023E7A12000558FAB /* CSResultWorker.swift */; };
+		4B31352723E7A12000558FAB /* CSResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31352123E7A12000558FAB /* CSResultRouter.swift */; };
+		4B31352823E7A12000558FAB /* CSResultModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31352223E7A12000558FAB /* CSResultModels.swift */; };
+		4B31352923E7A12000558FAB /* CSResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31352323E7A12000558FAB /* CSResultViewController.swift */; };
+		4B31352A23E7A12000558FAB /* CSResultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31352423E7A12000558FAB /* CSResultInteractor.swift */; };
+		4B31352D23E8EFC600558FAB /* CSContrastCheckWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31352C23E8EFC600558FAB /* CSContrastCheckWorker.swift */; };
+		4B31353123E8F14D00558FAB /* CSWebAIMAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31353023E8F14D00558FAB /* CSWebAIMAPI.swift */; };
 		4B5B9E2523DC7A0E00F51068 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2423DC7A0E00F51068 /* AppError.swift */; };
 		4B5B9E2823DC8CD600F51068 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */; };
 		4B5B9E2A23E127A600F51068 /* ColorCodeValidateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2923E127A600F51068 /* ColorCodeValidateInteractor.swift */; };
@@ -62,6 +70,14 @@
 		4B31351423E4695F00558FAB /* CSInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSInputViewController.swift; sourceTree = "<group>"; };
 		4B31351523E4695F00558FAB /* CSInputInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSInputInteractor.swift; sourceTree = "<group>"; };
 		4B31351C23E79C1400558FAB /* CSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CSMain.storyboard; sourceTree = "<group>"; };
+		4B31351F23E7A12000558FAB /* CSResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSResultPresenter.swift; sourceTree = "<group>"; };
+		4B31352023E7A12000558FAB /* CSResultWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSResultWorker.swift; sourceTree = "<group>"; };
+		4B31352123E7A12000558FAB /* CSResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSResultRouter.swift; sourceTree = "<group>"; };
+		4B31352223E7A12000558FAB /* CSResultModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSResultModels.swift; sourceTree = "<group>"; };
+		4B31352323E7A12000558FAB /* CSResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSResultViewController.swift; sourceTree = "<group>"; };
+		4B31352423E7A12000558FAB /* CSResultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSResultInteractor.swift; sourceTree = "<group>"; };
+		4B31352C23E8EFC600558FAB /* CSContrastCheckWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSContrastCheckWorker.swift; sourceTree = "<group>"; };
+		4B31353023E8F14D00558FAB /* CSWebAIMAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSWebAIMAPI.swift; sourceTree = "<group>"; };
 		4B5B9E2423DC7A0E00F51068 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		4B5B9E2923E127A600F51068 /* ColorCodeValidateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCodeValidateInteractor.swift; sourceTree = "<group>"; };
@@ -123,6 +139,8 @@
 		4B31350123E4658100558FAB /* CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4B31352E23E8F0E800558FAB /* Services */,
+				4B31352B23E8EFA300558FAB /* Workers */,
 				4B31350223E466AD00558FAB /* Scenes */,
 			);
 			path = CleanSwift;
@@ -133,6 +151,7 @@
 			children = (
 				4B31351C23E79C1400558FAB /* CSMain.storyboard */,
 				4B31350323E466B500558FAB /* CSInput */,
+				4B31351E23E7A0E200558FAB /* CSResult */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -148,6 +167,35 @@
 				4B31351523E4695F00558FAB /* CSInputInteractor.swift */,
 			);
 			path = CSInput;
+			sourceTree = "<group>";
+		};
+		4B31351E23E7A0E200558FAB /* CSResult */ = {
+			isa = PBXGroup;
+			children = (
+				4B31351F23E7A12000558FAB /* CSResultPresenter.swift */,
+				4B31352023E7A12000558FAB /* CSResultWorker.swift */,
+				4B31352123E7A12000558FAB /* CSResultRouter.swift */,
+				4B31352223E7A12000558FAB /* CSResultModels.swift */,
+				4B31352323E7A12000558FAB /* CSResultViewController.swift */,
+				4B31352423E7A12000558FAB /* CSResultInteractor.swift */,
+			);
+			path = CSResult;
+			sourceTree = "<group>";
+		};
+		4B31352B23E8EFA300558FAB /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				4B31352C23E8EFC600558FAB /* CSContrastCheckWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		4B31352E23E8F0E800558FAB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4B31353023E8F14D00558FAB /* CSWebAIMAPI.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		4B5B9E2623DC8CBC00F51068 /* ViewModel */ = {
@@ -503,10 +551,15 @@
 				4BADF64C23D67774007A21E6 /* ContrastCheckRepository.swift in Sources */,
 				4B5B9E2823DC8CD600F51068 /* ResultViewModel.swift in Sources */,
 				4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */,
+				4B31353123E8F14D00558FAB /* CSWebAIMAPI.swift in Sources */,
+				4B31352523E7A12000558FAB /* CSResultPresenter.swift in Sources */,
 				4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */,
+				4B31352923E7A12000558FAB /* CSResultViewController.swift in Sources */,
 				4BBABE4323D67292008AA000 /* ViewController.swift in Sources */,
+				4B31352623E7A12000558FAB /* CSResultWorker.swift in Sources */,
 				4BC9B81E23DACBFD00BE0F99 /* ContrastCheckInputModel.swift in Sources */,
 				4BC9B81A23DA734700BE0F99 /* DIContainer.swift in Sources */,
+				4B31352723E7A12000558FAB /* CSResultRouter.swift in Sources */,
 				4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */,
 				4B31351923E4695F00558FAB /* CSInputModels.swift in Sources */,
 				4BADF65223D6783F007A21E6 /* Router.swift in Sources */,
@@ -519,7 +572,10 @@
 				4B31351623E4695F00558FAB /* CSInputPresenter.swift in Sources */,
 				4B31351B23E4695F00558FAB /* CSInputInteractor.swift in Sources */,
 				4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */,
+				4B31352A23E7A12000558FAB /* CSResultInteractor.swift in Sources */,
+				4B31352823E7A12000558FAB /* CSResultModels.swift in Sources */,
 				4B31351823E4695F00558FAB /* CSInputRouter.swift in Sources */,
+				4B31352D23E8EFC600558FAB /* CSContrastCheckWorker.swift in Sources */,
 				4BADF65523D67ED7007A21E6 /* ContrastCheckDataModel.swift in Sources */,
 				4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */,
 			);
