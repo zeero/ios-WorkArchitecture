@@ -13,26 +13,34 @@
 import UIKit
 
 protocol CSResultBusinessLogic {
-    func doSomething(request: CSResult.Something.Request)
+    func contrastCheck(request: CSResult.ContrastCheck.Request)
 }
 
 protocol CSResultDataStore {
-    //var name: String { get set }
+    var fg: String { get set }
+    var bg: String { get set }
 }
 
 class CSResultInteractor: CSResultBusinessLogic, CSResultDataStore {
     
     var presenter: CSResultPresentationLogic?
     var worker: CSResultWorker?
-    //var name: String = ""
+    
+    var fg: String = ""
+    var bg: String = ""
     
     // MARK: Do something
     
-    func doSomething(request: CSResult.Something.Request) {
-        worker = CSResultWorker()
-        worker?.doSomeWork()
-        
-        let response = CSResult.Something.Response()
-        presenter?.presentSomething(response: response)
+    func contrastCheck(request: CSResult.ContrastCheck.Request) {
+        let worker = CSContrastCheckWorker()
+        let workerRequest = CSContrastCheck.GetResult.Request(fg: request.fg, bg: request.bg)
+        worker.getResult(input: workerRequest) { [weak self] result in
+            guard let ratio = result?.ratio else {
+                // TODO: showAlert
+                return
+            }
+            let response = CSResult.ContrastCheck.Response(ratio: ratio)
+            self?.presenter?.presentResult(response: response)
+        }
     }
 }

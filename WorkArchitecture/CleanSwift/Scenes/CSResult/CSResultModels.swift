@@ -15,12 +15,16 @@ import UIKit
 enum CSResult {
     // MARK: Use cases
     
-    enum Something {
+    enum ContrastCheck {
         struct Request {
+            let fg: String
+            let bg: String
         }
         struct Response {
+            let ratio: String
         }
         struct ViewModel {
+            let ratio: String
         }
     }
 }

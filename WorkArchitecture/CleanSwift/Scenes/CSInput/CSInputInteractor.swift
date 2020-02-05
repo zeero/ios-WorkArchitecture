@@ -10,29 +10,34 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Foundation
 
 protocol CSInputBusinessLogic {
-    func doSomething(request: CSInput.Something.Request)
+    func validateColorCode(request: CSInput.ValidateColorCode.Request)
 }
 
 protocol CSInputDataStore {
-    //var name: String { get set }
+    var fg: String { get set }
+    var bg: String { get set }
 }
 
 class CSInputInteractor: CSInputBusinessLogic, CSInputDataStore {
     
     var presenter: CSInputPresentationLogic?
     var worker: CSInputWorker?
-    //var name: String = ""
+    
+    var fg: String = ""
+    var bg: String = ""
     
     // MARK: Do something
     
-    func doSomething(request: CSInput.Something.Request) {
-        worker = CSInputWorker()
-        worker?.doSomeWork()
-        
-        let response = CSInput.Something.Response()
-        presenter?.presentSomething(response: response)
+    func validateColorCode(request: CSInput.ValidateColorCode.Request) {
+        let validator = CSColorCodeValidateWorker()
+        fg = request.fg
+        bg = request.bg
+        let isValidFg = validator.validate(target: fg)
+        let isValidBg = validator.validate(target: bg)
+        let response = CSInput.ValidateColorCode.Response(isValidFg: isValidFg, isValidBg: isValidBg)
+        presenter?.presentResult(response: response)
     }
 }

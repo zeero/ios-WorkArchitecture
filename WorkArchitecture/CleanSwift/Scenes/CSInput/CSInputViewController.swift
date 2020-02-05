@@ -13,7 +13,7 @@
 import UIKit
 
 protocol CSInputDisplayLogic: class {
-    func displaySomething(viewModel: CSInput.Something.ViewModel)
+    func displayResult(viewModel: CSInput.ValidateColorCode.ViewModel)
 }
 
 class CSInputViewController: UIViewController, CSInputDisplayLogic {
@@ -27,11 +27,9 @@ class CSInputViewController: UIViewController, CSInputDisplayLogic {
     @IBOutlet private weak var button: UIButton!
     
     @IBAction private func tapped(_ sender: AnyObject) {
-//        let fgText = fg.text ?? ""
-//        let bgText = bg.text ?? ""
-//        let input = ContrastCheckInputModel(fg: fgText, bg: bgText)
-//        _presenter?.checkContrast(input: input)
+        validateColorCode()
     }
+    
     
     // MARK: Object lifecycle
     
@@ -75,19 +73,19 @@ class CSInputViewController: UIViewController, CSInputDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
     }
     
     // MARK: Do something
     
     //@IBOutlet weak var nameTextField: UITextField!
     
-    func doSomething() {
-        let request = CSInput.Something.Request()
-        interactor?.doSomething(request: request)
+    func validateColorCode() {
+        let request = CSInput.ValidateColorCode.Request(fg: fg.text ?? "", bg: bg.text ?? "")
+        interactor?.validateColorCode(request: request)
     }
     
-    func displaySomething(viewModel: CSInput.Something.ViewModel) {
+    func displayResult(viewModel: CSInput.ValidateColorCode.ViewModel) {
         //nameTextField.text = viewModel.name
+        router?.routeToCSResult(segue: nil)
     }
 }

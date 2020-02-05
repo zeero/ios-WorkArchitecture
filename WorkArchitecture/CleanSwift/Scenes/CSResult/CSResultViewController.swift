@@ -13,7 +13,7 @@
 import UIKit
 
 protocol CSResultDisplayLogic: class {
-    func displaySomething(viewModel: CSResult.Something.ViewModel)
+    func displayResult(viewModel: CSResult.ContrastCheck.ViewModel)
 }
 
 class CSResultViewController: UIViewController, CSResultDisplayLogic {
@@ -67,19 +67,23 @@ class CSResultViewController: UIViewController, CSResultDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        contrastCheck()
     }
     
     // MARK: Do something
     
     //@IBOutlet weak var nameTextField: UITextField!
     
-    func doSomething() {
-        let request = CSResult.Something.Request()
-        interactor?.doSomething(request: request)
+    func contrastCheck() {
+        result.text = "???"
+        
+        let fg = router?.dataStore?.fg ?? ""
+        let bg = router?.dataStore?.bg ?? ""
+        let request = CSResult.ContrastCheck.Request(fg: fg, bg: bg)
+        interactor?.contrastCheck(request: request)
     }
     
-    func displaySomething(viewModel: CSResult.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func displayResult(viewModel: CSResult.ContrastCheck.ViewModel) {
+        result.text = viewModel.ratio
     }
 }

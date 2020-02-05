@@ -60,6 +60,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd2-MY-yuA">
                                         <rect key="frame" x="169" y="100" width="44" height="30"/>
                                         <state key="normal" title="Check"/>
+                                        <connections>
+                                            <action selector="tapped:" destination="HXd-0h-3D3" eventType="touchUpInside" id="ldy-99-7fi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -82,6 +85,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39G-g3-dpP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="92.410714285714278"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="8Az-2Z-505">
+            <objects>
+                <viewController storyboardIdentifier="CSResultViewController" id="RJx-oH-H4J" customClass="CSResultViewController" customModule="WorkArchitecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mnX-ls-vp5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="jY8-ev-yKD">
+                                <rect key="frame" x="16" y="60" width="382" height="38.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKb-lg-OMY">
+                                        <rect key="frame" x="153.5" y="0.0" width="75.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gh3-hx-w2z" firstAttribute="trailing" secondItem="jY8-ev-yKD" secondAttribute="trailing" constant="16" id="Wa2-YU-8KC"/>
+                            <constraint firstItem="jY8-ev-yKD" firstAttribute="top" secondItem="gh3-hx-w2z" secondAttribute="top" constant="16" id="fYD-30-zc4"/>
+                            <constraint firstItem="jY8-ev-yKD" firstAttribute="leading" secondItem="gh3-hx-w2z" secondAttribute="leading" constant="16" id="rk4-OJ-z5u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gh3-hx-w2z"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hut-Wy-IiN"/>
+                    <connections>
+                        <outlet property="result" destination="MKb-lg-OMY" id="WBc-Yx-YRl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J2f-XM-kCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1429" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RXD-i4-tjA">

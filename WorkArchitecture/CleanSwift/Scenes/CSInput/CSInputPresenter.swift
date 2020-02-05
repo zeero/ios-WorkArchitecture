@@ -10,10 +10,10 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Foundation
 
 protocol CSInputPresentationLogic {
-    func presentSomething(response: CSInput.Something.Response)
+    func presentResult(response: CSInput.ValidateColorCode.Response)
 }
 
 class CSInputPresenter: CSInputPresentationLogic {
@@ -22,8 +22,12 @@ class CSInputPresenter: CSInputPresentationLogic {
     
     // MARK: Do something
     
-    func presentSomething(response: CSInput.Something.Response) {
-        let viewModel = CSInput.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentResult(response: CSInput.ValidateColorCode.Response) {
+        if response.isValidFg && response.isValidBg {
+            let viewModel = CSInput.ValidateColorCode.ViewModel()
+            viewController?.displayResult(viewModel: viewModel)
+        } else {
+            // TODO
+        }
     }
 }

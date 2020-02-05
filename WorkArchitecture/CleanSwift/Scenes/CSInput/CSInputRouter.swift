@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol CSInputRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToCSResult(segue: UIStoryboardSegue?)
 }
 
 protocol CSInputDataPassing {
@@ -27,29 +27,30 @@ class CSInputRouter: NSObject, CSInputRoutingLogic, CSInputDataPassing {
     
     // MARK: Routing
     
-    //func routeToSomewhere(segue: UIStoryboardSegue?) {
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
+    func routeToCSResult(segue: UIStoryboardSegue?) {
+        if let segue = segue {
+            let destinationVC = segue.destination as! CSResultViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataToCSResult(source: dataStore!, destination: &destinationDS)
+        } else {
+            let storyboard = UIStoryboard(name: "CSMain", bundle: nil)
+            let destinationVC = storyboard.instantiateViewController(withIdentifier: "CSResultViewController") as! CSResultViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataToCSResult(source: dataStore!, destination: &destinationDS)
+            navigateToCSResult(source: viewController!, destination: destinationVC)
+        }
+    }
 
     // MARK: Navigation
     
-    //func navigateToSomewhere(source: CSInputViewController, destination: SomewhereViewController) {
-    //  source.show(destination, sender: nil)
-    //}
+    func navigateToCSResult(source: CSInputViewController, destination: CSResultViewController) {
+        source.show(destination, sender: nil)
+    }
     
     // MARK: Passing data
     
-    //func passDataToSomewhere(source: CSInputDataStore, destination: inout SomewhereDataStore) {
-    //  destination.name = source.name
-    //}
+    func passDataToCSResult(source: CSInputDataStore, destination: inout CSResultDataStore) {
+        destination.fg = source.fg
+        destination.bg = source.bg
+    }
 }

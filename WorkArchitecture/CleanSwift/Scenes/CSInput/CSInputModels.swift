@@ -10,15 +10,19 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Foundation
 
 enum CSInput {
     // MARK: Use cases
     
-    enum Something {
+    enum ValidateColorCode {
         struct Request {
+            let fg: String
+            let bg: String
         }
         struct Response {
+            let isValidFg: Bool
+            let isValidBg: Bool
         }
         struct ViewModel {
         }

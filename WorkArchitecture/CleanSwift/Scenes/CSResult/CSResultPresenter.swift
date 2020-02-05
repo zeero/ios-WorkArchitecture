@@ -13,7 +13,7 @@
 import UIKit
 
 protocol CSResultPresentationLogic {
-    func presentSomething(response: CSResult.Something.Response)
+    func presentResult(response: CSResult.ContrastCheck.Response)
 }
 
 class CSResultPresenter: CSResultPresentationLogic {
@@ -22,8 +22,8 @@ class CSResultPresenter: CSResultPresentationLogic {
     
     // MARK: Do something
     
-    func presentSomething(response: CSResult.Something.Response) {
-        let viewModel = CSResult.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentResult(response: CSResult.ContrastCheck.Response) {
+        let viewModel = CSResult.ContrastCheck.ViewModel(ratio: response.ratio)
+        viewController?.displayResult(viewModel: viewModel)
     }
 }
