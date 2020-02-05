@@ -16,6 +16,6 @@ class CSColorCodeValidateWorker {
     
     func validate(target: String) -> Bool {
         // TODO: validation
-        return true
+        return Int(target) != nil
     }
 }

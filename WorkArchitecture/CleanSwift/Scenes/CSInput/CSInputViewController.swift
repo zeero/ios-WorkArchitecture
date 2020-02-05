@@ -14,6 +14,7 @@ import UIKit
 
 protocol CSInputDisplayLogic: class {
     func displayResult(viewModel: CSInput.ValidateColorCode.ViewModel)
+    func showResult(message: String)
 }
 
 class CSInputViewController: UIViewController, CSInputDisplayLogic {
@@ -87,5 +88,12 @@ class CSInputViewController: UIViewController, CSInputDisplayLogic {
     func displayResult(viewModel: CSInput.ValidateColorCode.ViewModel) {
         //nameTextField.text = viewModel.name
         router?.routeToCSResult(segue: nil)
+    }
+    
+    func showResult(message: String) {
+        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }

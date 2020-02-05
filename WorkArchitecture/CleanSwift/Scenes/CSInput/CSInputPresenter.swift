@@ -27,7 +27,7 @@ class CSInputPresenter: CSInputPresentationLogic {
             let viewModel = CSInput.ValidateColorCode.ViewModel()
             viewController?.displayResult(viewModel: viewModel)
         } else {
-            // TODO
+            viewController?.showResult(message: "不正な入力です")
         }
     }
 }
