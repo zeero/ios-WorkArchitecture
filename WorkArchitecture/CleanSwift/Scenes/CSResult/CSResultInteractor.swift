@@ -35,11 +35,12 @@ class CSResultInteractor: CSResultBusinessLogic, CSResultDataStore {
         let worker = CSContrastCheckWorker()
         let workerRequest = CSContrastCheck.GetResult.Request(fg: request.fg, bg: request.bg)
         worker.getResult(input: workerRequest) { [weak self] result in
-            guard let ratio = result?.ratio else {
-                // TODO: showAlert
-                return
+            let response: CSResult.ContrastCheck.Response?
+            if let result = result {
+                response = CSResult.ContrastCheck.Response(ratio: result.ratio)
+            } else {
+                response = nil
             }
-            let response = CSResult.ContrastCheck.Response(ratio: ratio)
             self?.presenter?.presentResult(response: response)
         }
     }

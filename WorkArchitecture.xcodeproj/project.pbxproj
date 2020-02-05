@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B1384AE23D9B563000FAE8A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AD23D9B563000FAE8A /* ViewController.xib */; };
 		4B1384B023D9B5C0000FAE8A /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */; };
+		4B23597023EA442F00F1059C /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23596F23EA442F00F1059C /* Alertable.swift */; };
 		4B31351623E4695F00558FAB /* CSInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31351023E4695F00558FAB /* CSInputPresenter.swift */; };
 		4B31351723E4695F00558FAB /* CSInputWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31351123E4695F00558FAB /* CSInputWorker.swift */; };
 		4B31351823E4695F00558FAB /* CSInputRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B31351223E4695F00558FAB /* CSInputRouter.swift */; };
@@ -64,6 +65,7 @@
 		43C42AE94A20F33FC0B2ED15 /* Pods-WorkArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkArchitecture.release.xcconfig"; path = "Target Support Files/Pods-WorkArchitecture/Pods-WorkArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		4B1384AD23D9B563000FAE8A /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		4B23596F23EA442F00F1059C /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		4B31351023E4695F00558FAB /* CSInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSInputPresenter.swift; sourceTree = "<group>"; };
 		4B31351123E4695F00558FAB /* CSInputWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSInputWorker.swift; sourceTree = "<group>"; };
 		4B31351223E4695F00558FAB /* CSInputRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSInputRouter.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B23596E23EA43FF00F1059C /* ProtocolExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4B23596F23EA442F00F1059C /* Alertable.swift */,
+			);
+			path = ProtocolExtension;
+			sourceTree = "<group>";
+		};
 		4B31350023E4655100558FAB /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		4B31350123E4658100558FAB /* CleanSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4B23596E23EA43FF00F1059C /* ProtocolExtension */,
 				4B31352E23E8F0E800558FAB /* Services */,
 				4B31352B23E8EFA300558FAB /* Workers */,
 				4B31350223E466AD00558FAB /* Scenes */,
@@ -573,6 +584,7 @@
 				4B31351723E4695F00558FAB /* CSInputWorker.swift in Sources */,
 				4B5B9E2A23E127A600F51068 /* ColorCodeValidateInteractor.swift in Sources */,
 				4B31351623E4695F00558FAB /* CSInputPresenter.swift in Sources */,
+				4B23597023EA442F00F1059C /* Alertable.swift in Sources */,
 				4B31351B23E4695F00558FAB /* CSInputInteractor.swift in Sources */,
 				4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */,
 				4B31352A23E7A12000558FAB /* CSResultInteractor.swift in Sources */,

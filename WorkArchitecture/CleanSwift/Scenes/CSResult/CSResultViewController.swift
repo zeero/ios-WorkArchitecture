@@ -14,6 +14,7 @@ import UIKit
 
 protocol CSResultDisplayLogic: class {
     func displayResult(viewModel: CSResult.ContrastCheck.ViewModel)
+    func showAlert(message: String)
 }
 
 class CSResultViewController: UIViewController, CSResultDisplayLogic {
@@ -87,3 +88,5 @@ class CSResultViewController: UIViewController, CSResultDisplayLogic {
         result.text = viewModel.ratio
     }
 }
+
+extension CSResultViewController: Alertable {}
