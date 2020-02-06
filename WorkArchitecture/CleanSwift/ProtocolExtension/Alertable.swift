@@ -12,8 +12,12 @@ protocol Alertable {}
 
 extension Alertable where Self: UIViewController {
     func showAlert(message: String) {
+        showAlert(message: message, handler: nil)
+    }
+    
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default, handler: handler)
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)

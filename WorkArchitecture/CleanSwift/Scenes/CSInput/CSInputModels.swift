@@ -10,7 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import Foundation
+import UIKit
 
 enum CSInput {
     // MARK: Use cases
@@ -25,6 +25,8 @@ enum CSInput {
             let isValidBg: Bool
         }
         struct ViewModel {
+            let fgBackgroundColor: UIColor
+            let bgBackgroundColor: UIColor
         }
     }
 }

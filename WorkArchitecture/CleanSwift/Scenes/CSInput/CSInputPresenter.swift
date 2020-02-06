@@ -10,7 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import Foundation
+import UIKit
 
 protocol CSInputPresentationLogic {
     func presentResult(response: CSInput.ValidateColorCode.Response)
@@ -24,10 +24,20 @@ class CSInputPresenter: CSInputPresentationLogic {
     
     func presentResult(response: CSInput.ValidateColorCode.Response) {
         if response.isValidFg && response.isValidBg {
-            let viewModel = CSInput.ValidateColorCode.ViewModel()
-            viewController?.displayResult(viewModel: viewModel)
+            viewController?.displayResult()
         } else {
-            viewController?.showAlert(message: "不正な入力です")
+            let handler: (UIAlertAction) -> Void = { [weak self] _ in
+                guard let weakself = self else { return }
+                let fgColor = weakself.getBackgroundColor(isValid: response.isValidFg)
+                let bgColor = weakself.getBackgroundColor(isValid: response.isValidBg)
+                let viewModel = CSInput.ValidateColorCode.ViewModel(fgBackgroundColor: fgColor, bgBackgroundColor: bgColor)
+                weakself.viewController?.displayInvalid(viewModel: viewModel)
+            }
+            viewController?.showAlert(message: "不正な入力です", handler: handler)
         }
+    }
+    
+    private func getBackgroundColor(isValid: Bool) -> UIColor {
+        return isValid ? .white : .red
     }
 }

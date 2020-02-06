@@ -15,6 +15,7 @@ import UIKit
 protocol CSResultDisplayLogic: class {
     func displayResult(viewModel: CSResult.ContrastCheck.ViewModel)
     func showAlert(message: String)
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
 }
 
 class CSResultViewController: UIViewController, CSResultDisplayLogic {

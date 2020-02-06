@@ -13,8 +13,10 @@
 import UIKit
 
 protocol CSInputDisplayLogic: class {
-    func displayResult(viewModel: CSInput.ValidateColorCode.ViewModel)
+    func displayResult()
+    func displayInvalid(viewModel: CSInput.ValidateColorCode.ViewModel)
     func showAlert(message: String)
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
 }
 
 class CSInputViewController: UIViewController, CSInputDisplayLogic {
@@ -85,9 +87,13 @@ class CSInputViewController: UIViewController, CSInputDisplayLogic {
         interactor?.validateColorCode(request: request)
     }
     
-    func displayResult(viewModel: CSInput.ValidateColorCode.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func displayResult() {
         router?.routeToCSResult(segue: nil)
+    }
+
+    func displayInvalid(viewModel: CSInput.ValidateColorCode.ViewModel) {
+        fg.backgroundColor = viewModel.fgBackgroundColor
+        bg.backgroundColor = viewModel.bgBackgroundColor
     }
 }
 
