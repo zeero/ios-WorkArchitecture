@@ -10,7 +10,7 @@
 //  see http://clean-swift.com
 //
 
-import UIKit
+import Foundation
 
 protocol CSResultBusinessLogic {
     func contrastCheck(request: CSResult.ContrastCheck.Request)
