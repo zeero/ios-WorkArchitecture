@@ -7,32 +7,34 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ResultViewController: UIViewController {
 
-    var presenter: ResultViewPresentation?
-    private let _model: ResultViewModel
+    private var _presenter: ResultViewPresentation?
+    
+    private let disposeBag = DisposeBag()
+    private lazy var inputPort = (
+        result.rx.text
+    )
 
     @IBOutlet private weak var result: UILabel!
-
-
-    init(model: ResultViewModel) {
-        _model = model
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        result.text = _model.ratio
+        bind()
+    }
+    
+    
+    func inject(presenter: ResultViewPresentation) {
+        _presenter = presenter
+    }
+    
+    private func bind() {
+        _presenter?.outputPort.bind(to: inputPort).disposed(by: disposeBag)
     }
 }
-
-protocol ResultView {}
-extension ResultViewController: ResultView {}

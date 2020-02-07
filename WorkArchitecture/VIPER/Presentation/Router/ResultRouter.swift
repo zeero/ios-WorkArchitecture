@@ -12,8 +12,17 @@ protocol ResultWireframe {}
 
 struct ResultRouter {
 
+    private unowned let _viewController: UIViewController
+    
+    private init(viewController: UIViewController) {
+        _viewController = viewController
+    }
+    
     static func buildUp(model: ResultViewModel) -> UIViewController {
-        let view = ResultViewController(model :model)
+        let view = ResultViewController()
+        let router = ResultRouter(viewController: view)
+        let presenter = ResultViewPresenter(router: router, viewModel: model)
+        view.inject(presenter: presenter)
 
         return view
     }

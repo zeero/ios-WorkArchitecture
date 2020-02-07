@@ -43,8 +43,8 @@ class ViewPresenter {
         } else {
             let handler: (UIAlertAction) -> Void = { [weak self] _ in
                 // 背景色を変える
-                self?.outputPort.fgBackgroundColor.accept(isValidFg ? .white : .red)
-                self?.outputPort.bgBackgroundColor.accept(isValidBg ? .white : .red)
+                self?.fgBackgroundColor.accept(isValidFg ? .white : .red)
+                self?.bgBackgroundColor.accept(isValidBg ? .white : .red)
             }
             _router.showAlert(message: "不正な値です", handler: handler)
         }
@@ -65,8 +65,8 @@ protocol ViewPresentation {
     )
     
     typealias OutputPort = (
-        fgBackgroundColor: BehaviorRelay<UIColor>,
-        bgBackgroundColor: BehaviorRelay<UIColor>
+        fgBackgroundColor: Observable<UIColor>,
+        bgBackgroundColor: Observable<UIColor>
     )
     
     var inputPort: InputPort { get }
@@ -81,7 +81,10 @@ extension ViewPresenter: ViewPresentation {
     }
     
     var outputPort: OutputPort {
-        return (fgBackgroundColor: fgBackgroundColor, bgBackgroundColor: bgBackgroundColor)
+        return (
+            fgBackgroundColor: fgBackgroundColor.asObservable(),
+            bgBackgroundColor: bgBackgroundColor.asObservable()
+        )
     }
     
     func checkContrast(input: ContrastCheckInputModel) {
