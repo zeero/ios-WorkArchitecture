@@ -9,5 +9,6 @@
 import Foundation
 
 struct ResultViewModel {
+    let query: ContrastCheckInputModel
     let ratio: String
 }

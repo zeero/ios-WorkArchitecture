@@ -39,7 +39,10 @@ class ViewPresenter {
         let isValidBg = isValidColorCode(input: input.bg)
         
         if isValidFg && isValidBg {
-            checkContrast(input: input)
+            let inputModel = ContrastCheckInputModel(fg: input.fg, bg: input.bg)
+            let viewModel = ResultViewModel(query: inputModel, ratio: "")
+            _router.showResult(viewModel)
+//            checkContrast(input: input)
         } else {
             let handler: (UIAlertAction) -> Void = { [weak self] _ in
                 // 背景色を変える

@@ -24,7 +24,7 @@ extension ContrastCheckInteractor: ContrastCheckUseCase {
     func getResult(input: ContrastCheckInputModel) -> Observable<ResultViewModel> {
         guard let repository = dicon.resolve(ContrastCheckRepository.self) else { return .error(AppError.unknown) }
         return repository.fetchResult(input: input)
-            .map { return ResultViewModel(ratio: $0.ratio) }
+            .map { return ResultViewModel(query: input, ratio: $0.ratio) }
             .observeOn(MainScheduler.asyncInstance)
     }
 

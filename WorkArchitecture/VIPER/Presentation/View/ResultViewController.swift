@@ -27,6 +27,8 @@ class ResultViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         bind()
+        
+        _presenter?.checkContrast()
     }
     
     

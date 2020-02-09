@@ -8,8 +8,6 @@
 
 import UIKit
 
-protocol ResultWireframe {}
-
 struct ResultRouter {
 
     private unowned let _viewController: UIViewController
@@ -28,4 +26,18 @@ struct ResultRouter {
     }
 }
 
-extension ResultRouter: ResultWireframe {}
+protocol ResultWireframe {
+    func showAlert(message: String)
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
+}
+extension ResultRouter: ResultWireframe {
+    func showAlert(message: String) {
+        showAlert(message: message, handler: nil)
+    }
+    
+    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
+        _viewController.present(alert, animated: true, completion: nil)
+    }
+}
