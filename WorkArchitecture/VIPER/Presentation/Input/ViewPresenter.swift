@@ -33,13 +33,13 @@ class ViewPresenter {
     
     private func buttonTapped() {
         guard let fg = inputPort.fg.value, let bg = inputPort.bg.value else { return }
-        let input = ContrastCheckInputModel(fg: fg, bg: bg)
+        let input = ContrastCheck.Request(fg: fg, bg: bg)
         
         let isValidFg = isValidColorCode(input: input.fg)
         let isValidBg = isValidColorCode(input: input.bg)
         
         if isValidFg && isValidBg {
-            let inputModel = ContrastCheckInputModel(fg: input.fg, bg: input.bg)
+            let inputModel = ContrastCheck.Request(fg: input.fg, bg: input.bg)
             let viewModel = ResultViewModel(query: inputModel, ratio: "")
             _router.showResult(viewModel)
 //            checkContrast(input: input)
@@ -90,7 +90,7 @@ extension ViewPresenter: ViewPresentation {
         )
     }
     
-    func checkContrast(input: ContrastCheckInputModel) {
+    func checkContrast(input: ContrastCheck.Request) {
         guard let interactor = dicon.resolve(ContrastCheckUseCase.self) else { return }
         interactor.getResult(input: input).subscribe(
             onNext: { [weak self] model in

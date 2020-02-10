@@ -25,7 +25,7 @@
 		4BBABE5623D67293008AA000 /* WorkArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE5523D67293008AA000 /* WorkArchitectureTests.swift */; };
 		4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBABE6023D674BB008AA000 /* ResultViewController.swift */; };
 		4BC9B81A23DA734700BE0F99 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B81923DA734700BE0F99 /* DIContainer.swift */; };
-		4BC9B81E23DACBFD00BE0F99 /* ContrastCheckInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */; };
+		4BC9B81E23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B81D23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift */; };
 		4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */; };
 		4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */; };
 		5C62BE124FD1BC530681555E /* Pods_WorkArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DD8CC74B100D2DAF9CA975 /* Pods_WorkArchitecture.framework */; };
@@ -68,7 +68,7 @@
 		4BBABE5723D67293008AA000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BBABE6023D674BB008AA000 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		4BC9B81923DA734700BE0F99 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
-		4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckInputModel.swift; sourceTree = "<group>"; };
+		4BC9B81D23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckDomainModel.swift; sourceTree = "<group>"; };
 		4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
 		4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewPresenter.swift; sourceTree = "<group>"; };
 		6E5505678B93C80F3736B672 /* Pods-WorkArchitectureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkArchitectureTests.release.xcconfig"; path = "Target Support Files/Pods-WorkArchitectureTests/Pods-WorkArchitectureTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */,
-				4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */,
+				4BC9B81D23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift */,
 			);
 			path = ContrastCheck;
 			sourceTree = "<group>";
@@ -427,7 +427,7 @@
 				4BADF64923D67750007A21E6 /* ContrastCheckInteractor.swift in Sources */,
 				4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */,
 				4BBABE4323D67292008AA000 /* ViewController.swift in Sources */,
-				4BC9B81E23DACBFD00BE0F99 /* ContrastCheckInputModel.swift in Sources */,
+				4BC9B81E23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift in Sources */,
 				4BC9B81A23DA734700BE0F99 /* DIContainer.swift in Sources */,
 				4BBABE3F23D67292008AA000 /* AppDelegate.swift in Sources */,
 				4BADF65223D6783F007A21E6 /* Router.swift in Sources */,

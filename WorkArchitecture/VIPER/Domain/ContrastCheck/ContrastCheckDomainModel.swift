@@ -1,5 +1,5 @@
 //
-//  ContrastCheckInputModel.swift
+//  ContrastCheckDomainModel.swift
 //  WorkArchitecture
 //
 //  Created by zeero on 2020/01/24.
@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct ContrastCheckInputModel {
-    let fg: String
-    let bg: String
+enum ContrastCheck {
+    struct Request {
+        let fg: String
+        let bg: String
+    }
 }
