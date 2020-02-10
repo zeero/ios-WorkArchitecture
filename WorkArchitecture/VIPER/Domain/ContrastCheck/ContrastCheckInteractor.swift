@@ -35,6 +35,6 @@ extension ContrastCheckInteractor: ContrastCheckUseCase {
             }
         }
         let repository = dicon.resolve(ContrastCheckRepository.self)
-        repository?.fetchResult(input: input, callback: closure)
+//        repository?.fetchResult(input: input, callback: closure)
     }
 }

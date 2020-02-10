@@ -54,7 +54,7 @@ struct WebAIMAPI {
 
 protocol ContrastCheckRepository {
     func fetchResult(input: ContrastCheck.Request) -> Observable<ContrastCheckDataModel>
-    func fetchResult(input: ContrastCheck.Request, callback: @escaping (ContrastCheckDataModel?) -> Void)
+//    func fetchResult(input: ContrastCheck.Request, callback: @escaping (ContrastCheckDataModel?) -> Void)
 }
 
 extension WebAIMAPI: ContrastCheckRepository {
