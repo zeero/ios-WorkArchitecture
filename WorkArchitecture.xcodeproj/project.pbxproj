@@ -96,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B23597123F0E1AC00F1059C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4B31350023E4655100558FAB /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,14 +112,6 @@
 				4BADF64623D6773F007A21E6 /* Data */,
 			);
 			path = VIPER;
-			sourceTree = "<group>";
-		};
-		4B5B9E2623DC8CBC00F51068 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4BADF64223D67720007A21E6 /* Presenter */ = {
@@ -222,6 +222,7 @@
 				4BBABE6323D6753E008AA000 /* View */,
 				4BADF64223D67720007A21E6 /* Presenter */,
 				4BADF64D23D677A0007A21E6 /* Router */,
+				4B23597123F0E1AC00F1059C /* ViewModel */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -251,18 +252,9 @@
 		4BC9B81B23DACBAE00BE0F99 /* DomainModel */ = {
 			isa = PBXGroup;
 			children = (
-				4BC9B81C23DACBBD00BE0F99 /* InputModel */,
-				4B5B9E2623DC8CBC00F51068 /* ViewModel */,
-			);
-			path = DomainModel;
-			sourceTree = "<group>";
-		};
-		4BC9B81C23DACBBD00BE0F99 /* InputModel */ = {
-			isa = PBXGroup;
-			children = (
 				4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */,
 			);
-			path = InputModel;
+			path = DomainModel;
 			sourceTree = "<group>";
 		};
 		66A104632C58D012383DE739 /* Frameworks */ = {
