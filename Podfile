@@ -14,6 +14,8 @@ target 'WorkArchitecture' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
 end
