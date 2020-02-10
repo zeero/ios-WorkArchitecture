@@ -8,7 +8,9 @@
 
 import UIKit
 
-protocol Transitionar where Self: UIViewController {
+protocol Transitionar: class {
+    var navigationController: UINavigationController? { get }
+    
     func present(_ viewControllerToPresent: UIViewController, animated flag: Bool, completion: (() -> Void)?)
     func dismiss(animated flag: Bool, completion: (() -> Void)?)
 }
