@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4B1384AE23D9B563000FAE8A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AD23D9B563000FAE8A /* ViewController.xib */; };
 		4B1384B023D9B5C0000FAE8A /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */; };
+		4B58C5C523F0F33D0083D21A /* WorkArchitectureSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58C5C423F0F33D0083D21A /* WorkArchitectureSpec.swift */; };
+		4B58C5C823F0F5C00083D21A /* ColorCodeValidateInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B58C5C723F0F5C00083D21A /* ColorCodeValidateInteractorSpec.swift */; };
 		4B5B9E2523DC7A0E00F51068 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2423DC7A0E00F51068 /* AppError.swift */; };
 		4B5B9E2823DC8CD600F51068 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */; };
 		4B5B9E2A23E127A600F51068 /* ColorCodeValidateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B9E2923E127A600F51068 /* ColorCodeValidateInteractor.swift */; };
@@ -48,6 +50,8 @@
 		43C42AE94A20F33FC0B2ED15 /* Pods-WorkArchitecture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkArchitecture.release.xcconfig"; path = "Target Support Files/Pods-WorkArchitecture/Pods-WorkArchitecture.release.xcconfig"; sourceTree = "<group>"; };
 		4B1384AD23D9B563000FAE8A /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		4B58C5C423F0F33D0083D21A /* WorkArchitectureSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkArchitectureSpec.swift; sourceTree = "<group>"; };
+		4B58C5C723F0F5C00083D21A /* ColorCodeValidateInteractorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCodeValidateInteractorSpec.swift; sourceTree = "<group>"; };
 		4B5B9E2423DC7A0E00F51068 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
 		4B5B9E2923E127A600F51068 /* ColorCodeValidateInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCodeValidateInteractor.swift; sourceTree = "<group>"; };
@@ -155,6 +159,14 @@
 			path = VIPER;
 			sourceTree = "<group>";
 		};
+		4B58C5C623F0F5A50083D21A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4B58C5C723F0F5C00083D21A /* ColorCodeValidateInteractorSpec.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		4BADF64523D6773A007A21E6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +219,9 @@
 		4BBABE5423D67293008AA000 /* WorkArchitectureTests */ = {
 			isa = PBXGroup;
 			children = (
+				4B58C5C623F0F5A50083D21A /* Domain */,
 				4BBABE5523D67293008AA000 /* WorkArchitectureTests.swift */,
+				4B58C5C423F0F33D0083D21A /* WorkArchitectureSpec.swift */,
 				4BBABE5723D67293008AA000 /* Info.plist */,
 			);
 			path = WorkArchitectureTests;
@@ -463,7 +477,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B58C5C523F0F33D0083D21A /* WorkArchitectureSpec.swift in Sources */,
 				4BBABE5623D67293008AA000 /* WorkArchitectureTests.swift in Sources */,
+				4B58C5C823F0F5C00083D21A /* ColorCodeValidateInteractorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
