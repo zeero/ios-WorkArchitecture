@@ -96,12 +96,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4B23597123F0E1AC00F1059C /* ViewModel */ = {
+		4B1B143023F0E40A0057B080 /* Result */ = {
 			isa = PBXGroup;
 			children = (
+				4BBABE6023D674BB008AA000 /* ResultViewController.swift */,
+				4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */,
+				4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */,
+				4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */,
 				4B5B9E2723DC8CD600F51068 /* ResultViewModel.swift */,
 			);
-			path = ViewModel;
+			path = Result;
+			sourceTree = "<group>";
+		};
+		4B1B143123F0E40E0057B080 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				4BBABE4223D67292008AA000 /* ViewController.swift */,
+				4B1384AD23D9B563000FAE8A /* ViewController.xib */,
+				4BADF64323D67728007A21E6 /* ViewPresenter.swift */,
+				4BADF65123D6783F007A21E6 /* Router.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		4B1B143223F0E4310057B080 /* ContrastCheck */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */,
+				4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */,
+			);
+			path = ContrastCheck;
+			sourceTree = "<group>";
+		};
+		4B1B143323F0E4440057B080 /* ColorCodeValidate */ = {
+			isa = PBXGroup;
+			children = (
+				4B5B9E2923E127A600F51068 /* ColorCodeValidateInteractor.swift */,
+			);
+			path = ColorCodeValidate;
+			sourceTree = "<group>";
+		};
+		4B1B143423F0E45D0057B080 /* ContrastCheck */ = {
+			isa = PBXGroup;
+			children = (
+				4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */,
+				4BADF65423D67ED7007A21E6 /* ContrastCheckDataModel.swift */,
+			);
+			path = ContrastCheck;
 			sourceTree = "<group>";
 		};
 		4B31350023E4655100558FAB /* VIPER */ = {
@@ -114,20 +155,11 @@
 			path = VIPER;
 			sourceTree = "<group>";
 		};
-		4BADF64223D67720007A21E6 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				4BADF64323D67728007A21E6 /* ViewPresenter.swift */,
-				4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		4BADF64523D6773A007A21E6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				4BADF64723D67747007A21E6 /* Ineteractor */,
-				4BC9B81B23DACBAE00BE0F99 /* DomainModel */,
+				4B1B143323F0E4440057B080 /* ColorCodeValidate */,
+				4B1B143223F0E4310057B080 /* ContrastCheck */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -135,44 +167,9 @@
 		4BADF64623D6773F007A21E6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				4BADF64A23D67756007A21E6 /* Repository */,
-				4BADF65323D67EC6007A21E6 /* DataModel */,
+				4B1B143423F0E45D0057B080 /* ContrastCheck */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		4BADF64723D67747007A21E6 /* Ineteractor */ = {
-			isa = PBXGroup;
-			children = (
-				4BADF64823D67750007A21E6 /* ContrastCheckInteractor.swift */,
-				4B5B9E2923E127A600F51068 /* ColorCodeValidateInteractor.swift */,
-			);
-			path = Ineteractor;
-			sourceTree = "<group>";
-		};
-		4BADF64A23D67756007A21E6 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				4BADF64B23D67774007A21E6 /* ContrastCheckRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		4BADF64D23D677A0007A21E6 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				4BADF65123D6783F007A21E6 /* Router.swift */,
-				4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		4BADF65323D67EC6007A21E6 /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				4BADF65423D67ED7007A21E6 /* ContrastCheckDataModel.swift */,
-			);
-			path = DataModel;
 			sourceTree = "<group>";
 		};
 		4BBABE3223D67292008AA000 = {
@@ -219,23 +216,10 @@
 		4BBABE6223D67532008AA000 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				4BBABE6323D6753E008AA000 /* View */,
-				4BADF64223D67720007A21E6 /* Presenter */,
-				4BADF64D23D677A0007A21E6 /* Router */,
-				4B23597123F0E1AC00F1059C /* ViewModel */,
+				4B1B143123F0E40E0057B080 /* Input */,
+				4B1B143023F0E40A0057B080 /* Result */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		4BBABE6323D6753E008AA000 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4BBABE4223D67292008AA000 /* ViewController.swift */,
-				4B1384AD23D9B563000FAE8A /* ViewController.xib */,
-				4BBABE6023D674BB008AA000 /* ResultViewController.swift */,
-				4B1384AF23D9B5C0000FAE8A /* ResultViewController.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		4BC9B81823DA731600BE0F99 /* Application */ = {
@@ -247,14 +231,6 @@
 				4B5B9E2423DC7A0E00F51068 /* AppError.swift */,
 			);
 			path = Application;
-			sourceTree = "<group>";
-		};
-		4BC9B81B23DACBAE00BE0F99 /* DomainModel */ = {
-			isa = PBXGroup;
-			children = (
-				4BC9B81D23DACBFD00BE0F99 /* ContrastCheckInputModel.swift */,
-			);
-			path = DomainModel;
 			sourceTree = "<group>";
 		};
 		66A104632C58D012383DE739 /* Frameworks */ = {
