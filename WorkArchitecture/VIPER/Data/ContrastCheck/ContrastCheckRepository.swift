@@ -12,19 +12,18 @@ import RxSwift
 struct WebAIMAPI {
 
     private func contrastChecker(input: ContrastCheck.Request) -> Observable<ContrastCheckDataModel> {
-        return Observable.create { observer in
+        return Single.create { single in
             let callback: (ContrastCheckDataModel?) -> Void = { entity in
                 if let entity = entity {
-                    observer.onNext(entity)
-                    observer.onCompleted()
+                    single(.success(entity))
                 } else {
-                    observer.onError(AppError.apiError)
+                    single(.error(AppError.apiError))
                 }
             }
             self.contrastChecker(input: input, callback: callback)
 
             return Disposables.create()
-        }
+        }.asObservable()
     }
 
     private func contrastChecker(input: ContrastCheck.Request, callback: @escaping (ContrastCheckDataModel?) -> Void) {
