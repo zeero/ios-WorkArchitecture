@@ -29,6 +29,7 @@ struct ResultRouter {
 protocol ResultWireframe {
     func showAlert(message: String)
     func showAlert(message: String, retry: ((UIAlertAction) -> Void)?, handler: ((UIAlertAction) -> Void)?)
+    func popViewController()
 }
 extension ResultRouter: ResultWireframe {
     func showAlert(message: String) {
@@ -40,5 +41,9 @@ extension ResultRouter: ResultWireframe {
         alert.addAction(UIAlertAction(title: "再試行", style: .default, handler: retry))
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
         _viewController.present(alert, animated: true, completion: nil)
+    }
+    
+    func popViewController() {
+        _viewController.navigationController?.popViewController(animated: true)
     }
 }

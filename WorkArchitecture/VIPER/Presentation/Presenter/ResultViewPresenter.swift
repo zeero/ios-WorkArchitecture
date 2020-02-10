@@ -50,7 +50,9 @@ extension ResultViewPresenter: ResultViewPresentation {
                     retry: { _ in
                         self?.checkContrast()
                     },
-                    handler: nil
+                    handler: { _ in
+                        self?._router.popViewController()
+                    }
                 )
             }
         ).disposed(by: disposeBag)
