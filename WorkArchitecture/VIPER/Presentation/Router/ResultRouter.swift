@@ -28,15 +28,16 @@ struct ResultRouter {
 
 protocol ResultWireframe {
     func showAlert(message: String)
-    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?)
+    func showAlert(message: String, retry: ((UIAlertAction) -> Void)?, handler: ((UIAlertAction) -> Void)?)
 }
 extension ResultRouter: ResultWireframe {
     func showAlert(message: String) {
-        showAlert(message: message, handler: nil)
+        showAlert(message: message, retry: nil, handler: nil)
     }
     
-    func showAlert(message: String, handler: ((UIAlertAction) -> Void)?) {
+    func showAlert(message: String, retry: ((UIAlertAction) -> Void)?, handler: ((UIAlertAction) -> Void)?) {
         let alert = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "再試行", style: .default, handler: retry))
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: handler))
         _viewController.present(alert, animated: true, completion: nil)
     }

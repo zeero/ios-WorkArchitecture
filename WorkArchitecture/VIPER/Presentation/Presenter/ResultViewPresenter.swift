@@ -45,7 +45,13 @@ extension ResultViewPresenter: ResultViewPresentation {
                 self?.ratio.accept(model.ratio)
             },
             onError: { [weak self] error in
-                self?._router.showAlert(message: "データ取得に失敗しました")
+                self?._router.showAlert(
+                    message: "データ取得に失敗しました",
+                    retry: { _ in
+                        self?.checkContrast()
+                    },
+                    handler: nil
+                )
             }
         ).disposed(by: disposeBag)
     }
