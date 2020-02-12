@@ -17,15 +17,44 @@ class ViewPresenterSpec: QuickSpec {
     override func spec() {
         
         describe("button tapped") {
-            it("can test") {
-                let router = RouterMock()
-                let presenter = ViewPresenter(router: router)
+            context("non-numeric") {
+                it("should alert with string") {
+                    let router = RouterMock()
+                    let presenter = ViewPresenter(router: router)
+                    
+                    presenter.inputPort.fg.accept("foo")
+                    presenter.inputPort.bg.accept("1")
+                    presenter.inputPort.buttonTap.accept(())
+                    
+                    expect(router._message).to(equal("不正な値です"))
+                    expect(router._model).to(beNil())
+                }
                 
-                presenter.inputPort.fg.accept("foo")
-                presenter.inputPort.bg.accept("bar")
-                presenter.inputPort.buttonTap.accept(())
-                
-                expect(router._message).to(equal("不正な値です"))
+                it("should alert with blank") {
+                    let router = RouterMock()
+                    let presenter = ViewPresenter(router: router)
+                    
+                    presenter.inputPort.fg.accept("1")
+                    presenter.inputPort.bg.accept("")
+                    presenter.inputPort.buttonTap.accept(())
+                    
+                    expect(router._message).to(equal("不正な値です"))
+                    expect(router._model).to(beNil())
+                }
+            }
+            
+            context("numeric") {
+                it("should show Result") {
+                    let router = RouterMock()
+                    let presenter = ViewPresenter(router: router)
+                    
+                    presenter.inputPort.fg.accept("1")
+                    presenter.inputPort.bg.accept("2")
+                    presenter.inputPort.buttonTap.accept(())
+                    
+                    expect(router._message).to(beNil())
+                    expect(router._model).notTo(beNil())
+                }
             }
         }
     }
