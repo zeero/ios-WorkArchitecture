@@ -29,12 +29,12 @@ extension ContrastCheckInteractor: ContrastCheckUseCase {
     }
 
     func getResult(input: ContrastCheck.Request, callback: @escaping (ContrastCheckDataModel?) -> Void) {
-        let closure: (ContrastCheckDataModel?) -> Void = { entity in
-            DispatchQueue.main.async {
-                callback(entity)
-            }
-        }
-        let repository = dicon.resolve(ContrastCheckRepository.self)
+//        let closure: (ContrastCheckDataModel?) -> Void = { entity in
+//            DispatchQueue.main.async {
+//                callback(entity)
+//            }
+//        }
+//        let repository = dicon.resolve(ContrastCheckRepository.self)
 //        repository?.fetchResult(input: input, callback: closure)
     }
 }
