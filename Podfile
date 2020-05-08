@@ -8,6 +8,7 @@ target 'WorkArchitecture' do
   # Pods for WorkArchitecture
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'RxViewController'
 
   target 'WorkArchitectureTests' do
     inherit! :search_paths
