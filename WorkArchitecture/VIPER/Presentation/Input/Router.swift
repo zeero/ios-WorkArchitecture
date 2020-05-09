@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxViewController
 
 struct Router {
 
@@ -21,6 +23,18 @@ struct Router {
         let router = Router(viewController: view)
 
         let presenter = ViewPresenter(router: router)
+        
+        let disposer = CompositeDisposable()
+        view.rx.viewDidLoad.subscribe(onNext: {
+            view.outputPort.fg.bind(to: presenter.inputPort.fg).disposed(by: view.disposeBag)
+            view.outputPort.bg.bind(to: presenter.inputPort.bg).disposed(by: view.disposeBag)
+            view.outputPort.buttonTap.bind(to: presenter.inputPort.buttonTap).disposed(by: view.disposeBag)
+            presenter.outputPort.fgBackgroundColor.bind(to: view.inputPort.fgBackgroundColor).disposed(by: view.disposeBag)
+            presenter.outputPort.bgBackgroundColor.bind(to: view.inputPort.bgBackgroundColor).disposed(by: view.disposeBag)
+            
+            disposer.dispose()
+            }
+        ).disposed(by: disposer)
 
         view.inject(presenter: presenter)
 

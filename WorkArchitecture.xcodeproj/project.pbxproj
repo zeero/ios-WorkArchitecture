@@ -32,6 +32,7 @@
 		4BC9B81E23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9B81D23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift */; };
 		4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */; };
 		4BCADAA523D74E53000ED1F3 /* ResultViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */; };
+		4BDFD6FB24662D4F0086240B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDFD6FA24662D4F0086240B /* Extensions.swift */; };
 		5C62BE124FD1BC530681555E /* Pods_WorkArchitecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DD8CC74B100D2DAF9CA975 /* Pods_WorkArchitecture.framework */; };
 		B2AEF78E1E99D113EE9FA785 /* Pods_WorkArchitectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D897DCE4FEEEDECCE2A583 /* Pods_WorkArchitectureTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		4BC9B81D23DACBFD00BE0F99 /* ContrastCheckDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastCheckDomainModel.swift; sourceTree = "<group>"; };
 		4BCADAA223D74CF0000ED1F3 /* ResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRouter.swift; sourceTree = "<group>"; };
 		4BCADAA423D74E53000ED1F3 /* ResultViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewPresenter.swift; sourceTree = "<group>"; };
+		4BDFD6FA24662D4F0086240B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6E5505678B93C80F3736B672 /* Pods-WorkArchitectureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkArchitectureTests.release.xcconfig"; path = "Target Support Files/Pods-WorkArchitectureTests/Pods-WorkArchitectureTests.release.xcconfig"; sourceTree = "<group>"; };
 		84D897DCE4FEEEDECCE2A583 /* Pods_WorkArchitectureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorkArchitectureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3A8ACC021B3F7064403038 /* Pods-WorkArchitectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkArchitectureTests.debug.xcconfig"; path = "Target Support Files/Pods-WorkArchitectureTests/Pods-WorkArchitectureTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				4BBABE4023D67292008AA000 /* SceneDelegate.swift */,
 				4BC9B81923DA734700BE0F99 /* DIContainer.swift */,
 				4B5B9E2423DC7A0E00F51068 /* AppError.swift */,
+				4BDFD6FA24662D4F0086240B /* Extensions.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				4BBABE6123D674BB008AA000 /* ResultViewController.swift in Sources */,
 				4B5B9E2A23E127A600F51068 /* ColorCodeValidateInteractor.swift in Sources */,
 				4BCADAA323D74CF0000ED1F3 /* ResultRouter.swift in Sources */,
+				4BDFD6FB24662D4F0086240B /* Extensions.swift in Sources */,
 				4BADF65523D67ED7007A21E6 /* ContrastCheckDataModel.swift in Sources */,
 				4BADF64423D67728007A21E6 /* ViewPresenter.swift in Sources */,
 			);

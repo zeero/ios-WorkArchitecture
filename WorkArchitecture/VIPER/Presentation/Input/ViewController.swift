@@ -14,13 +14,13 @@ class ViewController: UIViewController {
     
     private var _presenter: ViewPresentation?
 
-    private let disposeBag = DisposeBag()
-    private lazy var outputPort = (
+    let disposeBag = DisposeBag()
+    lazy var outputPort = (
         fg: fg.rx.text,
         bg: bg.rx.text,
         buttonTap: button.rx.tap
     )
-    private lazy var inputPort = (
+    lazy var inputPort = (
         fgBackgroundColor: fg.rx.backgroundColor,
         bgBackgroundColor: bg.rx.backgroundColor
     )
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        guard let _presenter = _presenter else { return }
-        outputPort.fg.bind(to: _presenter.inputPort.fg).disposed(by: disposeBag)
-        outputPort.bg.bind(to: _presenter.inputPort.bg).disposed(by: disposeBag)
-        outputPort.buttonTap.bind(to: _presenter.inputPort.buttonTap).disposed(by: disposeBag)
-        _presenter.outputPort.fgBackgroundColor.bind(to: inputPort.fgBackgroundColor).disposed(by: disposeBag)
-        _presenter.outputPort.bgBackgroundColor.bind(to: inputPort.bgBackgroundColor).disposed(by: disposeBag)
+//        guard let _presenter = _presenter else { return }
+//        outputPort.fg.bind(to: _presenter.inputPort.fg).disposed(by: disposeBag)
+//        outputPort.bg.bind(to: _presenter.inputPort.bg).disposed(by: disposeBag)
+//        outputPort.buttonTap.bind(to: _presenter.inputPort.buttonTap).disposed(by: disposeBag)
+//        _presenter.outputPort.fgBackgroundColor.bind(to: inputPort.fgBackgroundColor).disposed(by: disposeBag)
+//        _presenter.outputPort.bgBackgroundColor.bind(to: inputPort.bgBackgroundColor).disposed(by: disposeBag)
     }
     
     
